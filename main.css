@@ -1,0 +1,10 @@
+:root
+{
+    --firstColor : #EFEEEE;
+    --secondaryColor : #272727;
+}
+
+.item
+{
+    text-align: center;
+}

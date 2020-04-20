@@ -1,8 +1,14 @@
-function myFunction() {
+
+function myFunction() 
+{
     const topNav = document.querySelector("#myTopnav");
-    if (topNav.className === "topnav") {
+
+    if (topNav.className === "topnav") 
+    {
       topNav.className += " responsive";
-    } else {
+    } 
+    else 
+    {
       topNav.className = "topnav";
     }
 }

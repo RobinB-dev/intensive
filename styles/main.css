@@ -1,81 +1,115 @@
-/* Define variables 
-
-:root
-{
-    --firstColor : #EFEEEE;
-    --secondaryColor : #272727;
-    --yellow : #ffc600;
-}
-
-Sizing grids
-
-html 
-{
-    box-sizing: border-box;
-    font-family: sans-serif;
-    font-weight: 300;
-    font-size: 10px;
-    color: var(--secondaryColor);
-    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
-}
-
-*, *:before, *:after 
-{
-  box-sizing: inherit;
-}
-
-.header
-{
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-auto-flow: dense;
-    margin-bottom: 10px;
-}
-
-.logo
-{
-    width: auto;
-    height: 30px;
-}
-
-.container
-{
-    margin: 50px 100px;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
-}
-
-.item
-{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    border: 5px solid rgba(0, 0, 0, 0.03);
-    border-radius: 3px;
-    font-size: 15px;
-    background-color: var(--yellow);
-}
-
-@media (max-width: 600px) 
-{
-    .item
-    {
-        font-size: 10px;
-    }
-} */
-
 body
 {
     background: #d2dae2;
 }
+
+/************
+
+ BACKGROUND 
+
+************/
 .game_background
 {
+    width: 1400px;
+    height: 800px;
+    margin: 0 auto;
+    background-image: url(../images/background.jpg);    
     margin-top: 300px;
     border: 3px solid white;
     border-radius: 3px;
-    box-shadow: 0px 0px 10px #00000055;
+    box-shadow: 0px 0px 8px #00000055;
     position : relative;
 }
 
+/*********
+
+POSITION OF EACH PLAYER
+
+*********/
+
+.player_1, .player_2, .player_3, .player_4
+{  
+    font-family: acumin-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.player_1
+{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+
+.player_3
+{
+    position: absolute;
+    top: 5px;
+    left: 1180px;
+}
+
+.player_2
+{
+    position: absolute;
+    top: 665px;
+    left: 10px;
+}
+
+.player_4
+{
+    position: absolute;
+    top: 665px;
+    left: 1180px;
+}
+
+/*********
+
+INPUT PLAYER NAME 
+
+*********/
+
+.playerPseudo
+{
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 600px;
+    top: 620px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.playerName 
+{
+    font-size: 50px;
+    font-family: acumin-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.confirmButton
+{
+    width: 120px;
+    margin-top: 10px;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #FFFFFF;
+    background: #f1c40f;
+    transition: all 0.4s;
+    box-shadow: 0px 0px 6px #00000074;
+    cursor: pointer;
+    user-select: none;
+}
+
+.confirmButton:hover
+{
+    scale: 1.1;
+}

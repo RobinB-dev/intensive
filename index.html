@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Titre de ma page</title>
+    <link rel="stylesheet" href="https://use.typekit.net/mfd8pjj.css">
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-    <div class="game_background"><img src="./images/background.svg" alt="Background game"> </div>
+
+    <!-- Game Background -->
+
+    <div class="game_background">
+
+        <!-- Players -->
+        <div class="player_1"><span>Julien</span></p></div>
+        <div class="player_2"><span>Camille</span></div>
+        <div class="player_3"><span>Paul</span></p></div>
+        <div class="player_4"><span></span></p></div>
+
+        <!-- Player Points -->
+        <div class="points_player1"><span class="points_player1"></span></div>
+        <div class="points_player2"><span class="points_player2"></span></div>
+        <div class="points_player3"><span class="points_player3"></span></div>
+        <div class="points_player4"><span class="points_player4"></span></div>
+    </div>
+
+    <!-- Input player name + button -->
+    <div class="playerPseudo">
+        <label for="playerName" class="playerName">Quel est votre pseudo ?</label>
+        <input type="text" id="playerName" class="inputName" required minlength="3" maxlength="12" size="50"> 
+        <div class="confirmButton"><span class="confirm">Confirmer</span></div>
+    </div>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>

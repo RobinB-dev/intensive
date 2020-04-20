@@ -1,14 +1,12 @@
+// Creating variables to create the event
 
-function myFunction() 
+let playerName = document.querySelector('.player_4')
+const inputName = document.querySelector('.inputName')
+const confirmButton = document.querySelector('.confirmButton')
+
+// When click, place player name in his place 
+
+confirmButton.addEventListener('click', (event) => 
 {
-    const topNav = document.querySelector("#myTopnav");
-
-    if (topNav.className === "topnav") 
-    {
-      topNav.className += " responsive";
-    } 
-    else 
-    {
-      topNav.className = "topnav";
-    }
-}
+  playerName.textContent = inputName.value
+})

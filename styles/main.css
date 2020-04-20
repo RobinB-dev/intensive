@@ -1,4 +1,4 @@
-/* Define variables */ 
+/* Define variables 
 
 :root
 {
@@ -7,7 +7,7 @@
     --yellow : #ffc600;
 }
 
-/* Sizing grids */
+Sizing grids
 
 html 
 {
@@ -64,4 +64,18 @@ html
     {
         font-size: 10px;
     }
+} */
+
+body
+{
+    background: #d2dae2;
 }
+.game_background
+{
+    margin-top: 300px;
+    border: 3px solid white;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px #00000055;
+    position : relative;
+}
+

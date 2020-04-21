@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+
 :root
 {
     --pinkPastel: #F6F4FE;
-    --bluePastel: #79B7FF;
+    --blue: #79B7FF;
+    --bluePastel: #EDF5FE;
     --cream: #FBFAFE;
     --white: #ffffff;
     --black: #272727;
@@ -16,7 +19,7 @@ body{
 h1{
     margin: 0;
     font-size: 20px;
-    color: var(--bluePastel) ;
+    color: var(--blue) ;
     font-family: 'Comfortaa', cursive;
     font-weight: 400;
 }
@@ -92,7 +95,15 @@ h2{
 }
 
 .table{
+    margin-top: 13px;
     grid-column: 3 / 6;
+    background: var(--bluePastel);
+    border-radius: 100px;
+    border: 5px solid var(--white);
+    box-shadow:  5px 5px 10px #ebebeb, 
+             -5px -5px 10px #ebebeb;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
 }
 
 .slotAva{    
@@ -126,4 +137,40 @@ h2{
     font-weight: 100;
     opacity: 0.2 ;
     z-index: 10;
-  }
+}
+
+.pickaxe{
+    grid-column-start: 1;
+    background: var(--blue);
+    border-radius: 30px;
+    margin: 10px 0 10px 30px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    color: var(--white);
+
+}
+
+.logo{
+    grid-column-start: 2;
+    background-image:url("../images/logo1000.svg");
+    background-repeat: no-repeat;
+    margin-left: 46px;
+}
+
+.trash{
+    grid-column-start: 3;
+    background: var(--blue);
+    border-radius: 30px;
+    margin: 10px 30px 10px 0;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    color: var(--white);
+}

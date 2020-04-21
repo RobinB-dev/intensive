@@ -71,14 +71,10 @@ INPUT PLAYER NAME
 
 .playerPseudo
 {
-    width: 1000px;
     display: flex;
     align-items: center;
-    position: absolute;
-    left: 600px;
-    top: 620px;
-    display: flex;
     flex-direction: column;
+    margin-top: 300px;
 }
 
 
@@ -92,12 +88,7 @@ INPUT PLAYER NAME
 
 .confirmButton
 {
-    width: 120px;
     margin-top: 10px;
-    display: flex;
-    justify-self: center;
-    align-self: center;
-    text-align: center;
     font-size: 30px;
     padding: 10px 20px;
     border-radius: 20px;

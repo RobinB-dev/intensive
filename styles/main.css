@@ -1,107 +1,83 @@
-body
+:root
 {
-    background: #d2dae2;
+    --pinkPastel: #F6F4FE;
+    --bluePastel: #79B7FF;
+    --cream: #FBFAFE;
+    --white: #ffffff;
+    --black: #272727;
 }
 
-/************
-
- BACKGROUND 
-
-************/
-.game_background
-{
-    width: 1400px;
-    height: 800px;
-    margin: 0 auto;
-    background-image: url(../images/Background.jpg);    
-    margin-top: 300px;
-    margin-bottom: 100px;
-    border: 3px solid white;
-    border-radius: 3px;
-    box-shadow: 0px 0px 8px #00000055;
-    position : relative;
+body{
+    background-image: url("../images/background.svg");
+    background-color: var(--cream);
 }
 
-/*********
-
-POSITION OF EACH PLAYER
-
-*********/
-
-.player_1, .player_2, .player_3, .player_4
-{  
-    font-family: acumin-pro, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 30px;
+h1{
+    margin: 0;
+    font-size: 20px;
+    color: var(--bluePastel) ;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+}
+.containerGame
+{
+    display: grid;
+    grid-template-columns: 1fr repeat(5, 200px) 1fr;
+    grid-template-rows: repeat(3, 180px) 1fr;
+    grid-gap: 10px;
+    height: 100vh;
 }
 
-.player_1
-{
-    position: absolute;
-    top: 5px;
-    left: 10px;
+
+.gridButtons{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    text-align: center;
 }
 
-.player_3
-{
-    position: absolute;
-    top: 5px;
-    left: 1180px;
+.myCards{
+    grid-column: 1 / -1;
+    /* background: var(--pinkPastel); */
+    box-shadow: 0 0 0px var(--black);
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 10px;
+    text-align: center;
 }
 
-.player_2
-{
-    position: absolute;
-    top: 665px;
-    left: 10px;
+.containerCards{
+    display: grid;
+    grid-template-rows: 34px 136px;
+    grid-gap: 10px;
+    text-align: center;
+
 }
 
-.player_4
-{
-    position: absolute;
-    top: 665px;
-    left: 1180px;
+
+.containerCards h1{
+    align-self: flex-end;
+    grid-row: 1 / 2;
 }
 
-/*********
-
-INPUT PLAYER NAME 
-
-*********/
-
-.playerPseudo
-{
+.multiTitle{
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 300px;
+    justify-content: space-around;
 }
 
+.boxShadow{
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    /* grid-gap:5px; */
+    border-radius: 6px;
+    background:var(--pinkPastel);
+    box-shadow: inset 5px 5px 5px #e2e0ea,
+    inset -5px -5px 5px #e2e0ea;
 
-.playerName 
-{
-    font-size: 50px;
-    font-family: acumin-pro, sans-serif;
-    font-weight: 300;
-    font-style: normal;
 }
 
-.confirmButton
-{
-    margin-top: 10px;
-    font-size: 30px;
-    padding: 10px 20px;
-    border-radius: 20px;
-    color: #FFFFFF;
-    background: #f1c40f;
-    transition: all 0.4s;
-    box-shadow: 0px 0px 6px #00000074;
-    cursor: pointer;
-    user-select: none;
-}
-
-.confirmButton:hover
-{
-    -webkit-transform: scale(1.1);
+.card{
+    margin: 8px 8px;
+    height: 80%;
 }

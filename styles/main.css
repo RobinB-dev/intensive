@@ -13,11 +13,21 @@
 body{
     background-image: url("../images/background.svg");
     background-color: var(--cream);
+    font-family: Comfortaa;
+    user-select: none;
 }
 
 h1{
     margin: 0;
     font-size: 20px;
+    color: var(--blue) ;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+}
+
+h2{
+    margin: 0;
+    font-size: 15px;
     color: var(--blue) ;
     font-family: 'Comfortaa', cursive;
     font-weight: 400;
@@ -95,8 +105,40 @@ h1{
              -5px -5px 10px #ebebeb;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-
 }
+
+.profil{    
+    display: grid;
+    position: relative;
+    
+}
+
+.avatar{
+    width: 90%;
+    display: flex;
+    align-self: flex-end;
+    justify-self: center;
+    
+}
+
+.slot1 h2{
+    margin-top: 15px;
+}
+
+
+.overlay {
+    position: absolute;
+    font-size: 50px;
+    padding-top: 45px;
+    color: var(--blue);
+    font-weight: 700;
+    justify-content: center;
+    justify-self: center;
+    z-index: 10;
+}
+
+
+
 
 .pickaxe{
     grid-column-start: 1;
@@ -110,10 +152,11 @@ h1{
     font-family: 'Comfortaa', cursive;
     font-weight: 400;
     color: var(--white);
-
 }
 
 .logo{
+    margin-top: 10px;
+    margin-bottom: 10px;
     grid-column-start: 2;
     background-image:url("../images/logo1000.svg");
     background-repeat: no-repeat;
@@ -133,3 +176,28 @@ h1{
     font-weight: 400;
     color: var(--white);
 }
+
+.emoteContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.button{
+    width: 65px;
+    height: 65px;
+    background: var(--bluePastel);
+    border-radius: 100px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    
+}
+
+.button:hover{
+    cursor: pointer;
+    -webkit-transform: scale(1.1);
+}
+.emote{
+    width: 80%;
+}
+

@@ -72,12 +72,16 @@ h1{
     /* grid-gap:5px; */
     border-radius: 6px;
     background:var(--pinkPastel);
-    box-shadow: inset 5px 5px 5px #e2e0ea,
-    inset -5px -5px 5px #e2e0ea;
+    box-shadow: inset 5px 5px 5px #efedf6,
+    inset -5px -5px 5px #efedf6;
 
 }
 
 .card{
     margin: 8px 8px;
     height: 80%;
+}
+
+.table{
+    grid-column: 3 / 6;
 }

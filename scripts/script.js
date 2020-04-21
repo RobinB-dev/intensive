@@ -20,6 +20,6 @@ const deckCard = document.querySelector('.card')
 
 
 deckCard.src = deck [randowmCard-1]
-console.log(deckCard.src)
 
+console.log(deckCard.src)
 console.log(deck)

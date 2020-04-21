@@ -9,7 +9,5 @@ let playerPseudo = document.querySelector('.playerPseudo')
 confirmButton.addEventListener('click', (event) => 
 {
   playerName.textContent = inputName.value
-  if (inputName.value != 0) {
-    playerPseudo.style.display = 'none'
-  }
+  playerPseudo.style.display = 'none'
 })

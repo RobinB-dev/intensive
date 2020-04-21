@@ -288,43 +288,43 @@ let deck = [
   id: '66',
   type: 'speed'
 },{
-  nick: 'card_Speed_50',
+  nick: 'card_speed_50',
   id: '67',
   type: 'speed'
 },{
-  nick: 'card_Speed_50',
+  nick: 'card_speed_50',
   id: '68',
   type: 'speed'
 },{
-  nick: 'card_Speed_50',
+  nick: 'card_speed_50',
   id: '69',
   type: 'speed'
 },{
-  nick: 'card_Speed_50',
+  nick: 'card_speed_50',
   id: '70',
   type: 'speed'
 },{
-  nick: 'card_Speed_50',
+  nick: 'card_speed_50',
   id: '71',
   type: 'speed'
 },{
-  nick: 'card_Speed_50',
+  nick: 'card_speed_50',
   id: '72',
   type: 'speed'
 },{
-  nick: 'card_Speed_50',
+  nick: 'card_speed_50',
   id: '73',
   type: 'speed'
 },{
-  nick: 'card_Speed_50',
+  nick: 'card_speed_50',
   id: '74',
   type: 'speed'
 },{
-  nick: 'card_Speed_50',
+  nick: 'card_speed_50',
   id: '75',
   type: 'speed'
 },{
-  nick: 'card_Speed_50',
+  nick: 'card_speed_50',
   id: '76',
   type: 'speed'
 },{

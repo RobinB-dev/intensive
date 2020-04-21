@@ -1,0 +1,30 @@
+:root
+{
+    
+}
+
+.container_game
+{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 180px);
+    grid-gap: 10px;
+}
+
+.container_card
+{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+}
+
+.item
+{
+    background: #C8E1FF;
+}
+
+.item28
+{
+    grid-row-end: -1;
+}

@@ -10,11 +10,20 @@
 body{
     background-image: url("../images/background.svg");
     background-color: var(--cream);
+    font-family: Comfortaa;
 }
 
 h1{
     margin: 0;
     font-size: 20px;
+    color: var(--bluePastel) ;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+}
+
+h2{
+    margin: 0;
+    font-size: 15px;
     color: var(--bluePastel) ;
     font-family: 'Comfortaa', cursive;
     font-weight: 400;
@@ -85,3 +94,36 @@ h1{
 .table{
     grid-column: 3 / 6;
 }
+
+.slotAva{    
+    display: grid;
+    position: relative;
+    
+}
+
+.avatar{
+    width: 70%;
+    display: flex;
+    align-self: flex-end;
+    justify-self: center;
+    
+}
+
+.slot1 h2{
+    margin-top: 20px;
+    height: 60px;
+
+    
+}
+
+
+.overlay {
+    position: absolute;
+    font-size: 60px;
+    padding-top: 30px;
+    color: var(--blue);
+    justify-content: center;
+    font-weight: 100;
+    opacity: 0.2 ;
+    z-index: 10;
+  }

@@ -14,7 +14,7 @@ confirmButton.addEventListener('click', (event) =>
 
 const deck = [200,200,200,200,100,100,100,100,100,100,100,100,100,100,100,100,75,75,75,75,75,75,75,75,75,75]
 
-const randowmCard = Math.ceil(Math.random()*26)
+const randomCard = Math.ceil(Math.random()*26)
 const deckCard = document.querySelector('.card')
 deckCard.src = deck[randowmCard-1]
 

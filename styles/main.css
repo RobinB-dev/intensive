@@ -110,10 +110,11 @@ h1{
     font-family: 'Comfortaa', cursive;
     font-weight: 400;
     color: var(--white);
-
 }
 
 .logo{
+    margin-top: 10px;
+    margin-bottom: 10px;
     grid-column-start: 2;
     background-image:url("../images/logo1000.svg");
     background-repeat: no-repeat;

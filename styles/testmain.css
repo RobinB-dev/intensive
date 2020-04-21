@@ -1,25 +1,73 @@
 :root
 {
-    
+    --pinkPastel: #F6F4FE;
+    --bluePastel: ##79B7FF;
+    --cream: ##FBFAFE;
+    --white: #ffffff;
+    --black: #272727;
 }
 
-.container_game
+body{
+    background: var(--cream);
+}
+
+h1{
+    margin: 0;
+    font-size: 20px;
+    color: var(--bluePastel) ;
+}
+.containerGame
 {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(3, 180px);
+    grid-template-columns: 1fr repeat(5, 200px) 1fr;
+    grid-template-rows: repeat(3, 180px) 1fr;
+    grid-gap: 10px;
+    height: 100vh;
+}
+
+
+.item1{
+    display: grid;
+    background: #fff;
+    grid-template-rows: repeat(2, 1fr);
     grid-gap: 10px;
 }
 
-.container_card
-{
+.item22{
+    grid-column: 1 / -1;
+    background: #fff;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    grid-gap: 20px;
+    grid-gap: 10px;
 }
 
-.item
-{
-    background: #C8E1FF;
+.containerCards{
+    display: grid;
+    grid-template-rows: 34px 136px;
+    grid-gap: 10px;
+    text-align: center;
+    
+}
+
+.containerCards h1{
+    align-self: flex-end;
+    grid-row: 1 / 2;
+}
+
+.boxShadow{
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    /* grid-gap:5px; */
+    border-radius: 6px;
+    background:var(--pinkPastel);
+    box-shadow: inset 5px 5px 5px #cccbd3, 
+    inset -5px -5px 5px #cccbd3;
+
+}
+
+.card{
+    margin: 8px 8px;
+    height: 80%;
 }
 

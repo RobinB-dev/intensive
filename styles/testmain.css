@@ -8,7 +8,8 @@
 }
 
 body{
-    background: var(--cream);
+    background-image: url("../bg.svg");
+    background-color: var(--cream);
 }
 
 h1{
@@ -28,20 +29,21 @@ h1{
 }
 
 
-.item1{
+.gridButtons{
     display: grid;
-    background: #fff;
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 10px;
+    text-align: center;
 }
 
-.item22{
+.myCards{
     grid-column: 1 / -1;
     background: var(--pinkPastel);
     box-shadow: 0 0 0px var(--black);
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-gap: 10px;
+    text-align: center;
 }
 
 .containerCards{
@@ -49,12 +51,18 @@ h1{
     grid-template-rows: 34px 136px;
     grid-gap: 10px;
     text-align: center;
-    
+
 }
+
 
 .containerCards h1{
     align-self: flex-end;
     grid-row: 1 / 2;
+}
+
+.multiTitle{
+    display: flex;
+    justify-content: space-around;
 }
 
 .boxShadow{
@@ -64,16 +72,12 @@ h1{
     /* grid-gap:5px; */
     border-radius: 6px;
     background:var(--pinkPastel);
-    box-shadow: inset 5px 5px 5px #cccbd3, 
-    inset -5px -5px 5px #cccbd3;
+    box-shadow: inset 5px 5px 5px #e2e0ea,
+    inset -5px -5px 5px #e2e0ea;
+
 }
 
 .card{
     margin: 8px 8px;
     height: 80%;
-}
-
-.item28
-{
-    grid-row-end: -1;
 }

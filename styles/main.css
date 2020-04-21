@@ -103,5 +103,5 @@ INPUT PLAYER NAME
 
 .confirmButton:hover
 {
-    scale: 1.1;
+    -webkit-transform: scale(1.1);
 }

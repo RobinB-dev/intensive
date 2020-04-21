@@ -31,6 +31,7 @@ deckCard.addEventListener('click', (event) =>
  
 
 
+  console.log(trashCard)
   console.log(deck.indexOf(card.src))
   console.log(card.src)
   console.log(deck)

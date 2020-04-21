@@ -20,6 +20,7 @@ const deckCard = document.querySelector('.card')
 
 
 deckCard.src = deck [randowmCard-1]
-
+deck.splice(0,deck.indexOf(deckCard.src))
 console.log(deckCard.src)
 console.log(deck)
+

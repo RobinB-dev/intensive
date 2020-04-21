@@ -12,15 +12,16 @@ confirmButton.addEventListener('click', (event) =>
   playerPseudo.style.display = 'none'
 })
 
-const deck = [200,200,200,200,100,100,100,100,100,100,100,100,100,100,100,100,75,75,75,75,75,75,75,75,75,75]
+const deck = [200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225]
 
-const randowmCard = Math.ceil(Math.random()*26)
+const randomCard = Math.ceil(Math.random()*26)
 
 const deckCard = document.querySelector('.card')
 
 
-deckCard.src = deck [randowmCard-1]
-deck.splice(0,deck.indexOf(deckCard.src))
+deckCard.src = deck [randomCard-1]
+console.log(deck.indexOf(deckCard.src))
+deck.splice(1,deck.indexOf(deckCard.src))
 console.log(deckCard.src)
 console.log(deck)
 

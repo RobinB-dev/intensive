@@ -35,7 +35,7 @@ h2{
 .containerGame
 {
     display: grid;
-    grid-template-columns: 1fr repeat(5, 200px) 1fr;
+    grid-template-columns: 1fr 200px 30px repeat(3, 200px) 30px 200px 1fr;
     grid-template-rows: repeat(3, 180px) 1fr;
     grid-gap: 10px;
     height: 100vh;
@@ -97,14 +97,36 @@ h2{
 
 .table{
     margin-top: 13px;
-    grid-column: 3 / 6;
+    grid-column: 4 / 7;
     background: var(--bluePastel);
     border-radius: 100px;
     border: 5px solid var(--white);
     box-shadow:  5px 5px 10px #ebebeb, 
              -5px -5px 10px #ebebeb;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 3fr 4fr 3fr;
+}
+
+.deck{
+    background: var(--white);
+    width: 85px;
+    height: 120px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    color: var(--blue);
+}
+
+.logo{
+    align-self: center;
+    justify-self: center;
+    width: 80%;
 }
 
 .profil{    
@@ -121,10 +143,17 @@ h2{
     
 }
 
+.avat2{
+    width: 80px;
+}
+
 .slot1 h2{
     margin-top: 15px;
 }
 
+.slot1{
+    height: 136px;
+}
 
 .overlay {
     position: absolute;
@@ -135,46 +164,6 @@ h2{
     justify-content: center;
     justify-self: center;
     z-index: 10;
-}
-
-
-
-
-.pickaxe{
-    grid-column-start: 1;
-    background: var(--blue);
-    border-radius: 30px;
-    margin: 10px 0 10px 30px;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Comfortaa', cursive;
-    font-weight: 400;
-    color: var(--white);
-}
-
-.logo{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    grid-column-start: 2;
-    background-image:url("../images/logo1000.svg");
-    background-repeat: no-repeat;
-    margin-left: 46px;
-}
-
-.trash{
-    grid-column-start: 3;
-    background: var(--blue);
-    border-radius: 30px;
-    margin: 10px 30px 10px 0;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Comfortaa', cursive;
-    font-weight: 400;
-    color: var(--white);
 }
 
 .emoteContainer{
@@ -201,3 +190,7 @@ h2{
     width: 80%;
 }
 
+.card{
+    width: 86px;
+    height: 120px;
+}

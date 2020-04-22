@@ -479,48 +479,61 @@ takeCard()
 })
 
 
-let memCard1 = 0
-let memCard2 = 0
-let memCard3 = 0
-let memCard4 = 0
-let memCard5 = 0
-let memCard6 = 0
+let card1 = 0
+let card2 = 0
+let card3 = 0
+let card4 = 0
+let card5 = 0
+let card6 = 0
 
-
+let o = 0
 function takeCard() {
-  hand.splice(1,0,deck [Math.ceil(Math.random()*106)-1])
-  hand.splice(2,1,deck [Math.ceil(Math.random()*106)-1])
-  hand.splice(3,1,deck [Math.ceil(Math.random()*106)-1])
-  hand.splice(4,1,deck [Math.ceil(Math.random()*106)-1])
-  hand.splice(5,1,deck [Math.ceil(Math.random()*106)-1])
-  hand.splice(6,1,deck [Math.ceil(Math.random()*106)-1])
+  hand.splice(0,0,deck [Math.ceil(Math.random()*106-o)-1])
+  o++
+  // hand.splice(2,1,deck [Math.ceil(Math.random()*106)-1])
+  // hand.splice(3,1,deck [Math.ceil(Math.random()*106)-1])
+  // hand.splice(4,1,deck [Math.ceil(Math.random()*106)-1])
+  // hand.splice(5,1,deck [Math.ceil(Math.random()*106)-1])
+  // hand.splice(6,1,deck [Math.ceil(Math.random()*106)-1])
   const nick = hand.map(hand => `${hand.nick}`)
   const chain1 = ['./images/cards/']
-  const chain2 = nick[1]
+  const chain2 = nick[0]
   const chain3 = ['.svg']
   // const place = '.card' + i
   const image = chain1+chain2+chain3
   //console.log(place)
   i++
-  if (memCard1 == 0) {
+  if (card1 == 0) {
     document.querySelector('.card1').src = image
-    memCard1 = 1    
-  } else if (memCard2 == 0) {
+    card1 = 1    
+  } else if (card2 == 0) {
     document.querySelector('.card2').src = image
-    memCard2 = 1    
-  } else if (memCard3 == 0) {
+    card2 = 1    
+  } else if (card3 == 0) {
     document.querySelector('.card3').src = image
-    memCard3 = 1    
-  } else if (memCard4 == 0) {
+    card3 = 1    
+  } else if (card4 == 0) {
     document.querySelector('.card4').src = image
-    memCard4 = 1    
-  } else if (memCard5 == 0) {
+    card4 = 1    
+  } else if (card5 == 0) {
     document.querySelector('.card5').src = image
-    memCard5 = 1    
-  } else if (memCard6 == 0) {
+    card5 = 1    
+  } else if (card6 == 0) {
     document.querySelector('.card6').src = image
-    memCard6 = 1    
+    card6 = 1    
   }
+  // console.log(this.classList[1].substr(4));
+// console.log(hand);
+const id = hand.map(hand => `${hand.id}`)
+const placeId = id[1]
+// console.log(placeId)
+// console.log(deckOne)
+j = 0
+j++
+deck.splice(placeId-j,1)
+console.log(deck)
+// console.log(deckOne.indexOf(hand[1]))
+
 }
 
 
@@ -550,22 +563,39 @@ function takeCard() {
 
 
 
-const moveCard = document.querySelector('.card1')
-moveCard.addEventListener('click',(event) => {
-moveCardFunc()
-})
+const moveCard = document.querySelectorAll('.myCards')
+for (card of moveCard){ 
+  card.addEventListener('click', moveCardFunc)
+}
 function moveCardFunc() {
+  var getIndex = this.classList[1].substr(4)
   console.log(hand);
-  const nick = hand.map(hand => `${hand.nick}`)
-  const type = hand.map(hand => `${hand.type}`)
-  const nameChan1 = ['./images/cards/']
-  const nameChain2 = nick[1]
-  console.log(nameChain2);
-  const nameChain3 = ['.svg']
-  const moveSRC = nameChan1 + nameChain2 + nameChain3
-  const placeType = '.' + type[1]
+  const nick = hand.map(hand => `${hand.nick}`).reverse()
+  const type = hand.map(hand => `${hand.type}`).reverse()
+  const moveSRC = [`./images/cards/${nick[parseInt(getIndex-1)]}.svg`]
+  const placeType = '.' + type[0]
   console.log(placeType);  
   document.querySelector(placeType).src = moveSRC
-  document.querySelector('.card1').src = ''
+  this.src = ''
+  card1 = 0
+  console.table(hand)
+  console.table(nick)
+  console.table(type)
+  console.log(this.classList[1])
+  this.classList1
+  
+  if (this.classList[1] === "card1") {
+    card1 = 0
+  } else if (this.classList[1] === "card2") {
+    card2 = 0
+  } else if (this.classList[1] === "card3") {
+    card3 = 0
+  } else if (this.classList[1] === "card4") {
+    card4 = 0
+  } else if (this.classList[1] === "card5") {
+    card5 = 0
+  } else if (this.classList[1] === "card6") {
+    card6 = 0    
+  }
 }
 

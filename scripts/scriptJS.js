@@ -468,7 +468,7 @@ const deck = [
 console.log(deck)
 const randomCard = Math.ceil(Math.random()*106)
 
-var i = 1;
+let i = 1;
 let card = document.querySelector('.card')
 let hand = []
 
@@ -477,10 +477,6 @@ const fro = document.querySelector('.fro')
 fro.addEventListener('click',(event) => {
 takeCard()
 })
-
-
-
-
 
 function takeCard() {
   hand.splice(1,0,deck [Math.ceil(Math.random()*106)-1])

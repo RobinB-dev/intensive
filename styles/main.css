@@ -207,7 +207,19 @@ h2{
 .slot1{
     height: 136px;
 }
-
+.slot2{ 
+    cursor: pointer;
+}
+.hold{
+    border: solid #cccccc 4px;
+}
+.hovered{
+    background: #ffffff;
+    border-style: dashed;
+}
+.invisible{
+    display: none;
+}
 .overlay {
     position: absolute;
     font-size: 50px;

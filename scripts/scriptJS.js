@@ -143,12 +143,8 @@ function moveCardFunc() {
     card6 = 0    
   }
 }
-const  balAttack = document.querySelector('.balAttack')
-const  robAttack = document.querySelector('.robAttack')
-const  melAttack = document.querySelector('.melAttack')
-const  gasAttack = document.querySelector('.gasAttack')
-card.addEventListener('click')(){
-if (melAttack.addEventListener('click')() {
-  const click = 1
-}
-}
+const  player1Attack = document.querySelector('.player1Attack')
+const  player3Attack = document.querySelector('.player3Attack')
+const  player4Attack = document.querySelector('.player4Attack')
+
+console.log(player3Attack)

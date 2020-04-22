@@ -13,7 +13,7 @@
 body{
     background-image: url("../images/background.svg");
     background-color: var(--cream);
-    font-family: Comfortaa;
+    font-family: 'Comfortaa', cursive;
     user-select: none;
 }
 
@@ -87,7 +87,6 @@ h1{
     margin: 0;
     font-size: 20px;
     color: var(--blue) ;
-    font-family: 'Comfortaa', cursive;
     font-weight: 400;
 }
 
@@ -95,7 +94,6 @@ h2{
     margin: 0;
     font-size: 15px;
     color: var(--blue) ;
-    font-family: 'Comfortaa', cursive;
     font-weight: 400;
 }
 .containerGame
@@ -174,7 +172,6 @@ h2{
     justify-content: center;
     align-self: center;
     justify-self: center;
-    font-family: 'Comfortaa', cursive;
     font-weight: 400;
     color: var(--blue);
 }

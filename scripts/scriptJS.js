@@ -58,18 +58,18 @@ function takeCard() {
   // hand.splice(0,0,deck [Math.floor(Math.random()*deck.length)])
   // o++
   const nick = hand.map(hand => `${hand.nick}`).reverse()
-  console.log(nick[0]);
-  console.log(nick);
-  console.log(hand);
   
-  const nick = hand.map(hand => `${hand.nick}`)
+  // const nick = hand.map(hand => `${hand.nick}`)
   const name = [`./images/cards/${nick[0]}.svg`]
   const image = name
 
   // if it's true the card goes in the hand
   if (card1 == 0) {
+    console.log(card1);
+    
     document.querySelector('.card1').src = image
     card1 = 1    
+    console.log(card1);
   } else if (card2 == 0) {
     document.querySelector('.card2').src = image
     card2 = 1    
@@ -86,10 +86,6 @@ function takeCard() {
     document.querySelector('.card6').src = image
     card6 = 1    
   }
-  console.log(card1)
-  console.log(card2)
-  console.log(card3)
-console.log(hand)
 }
 
 
@@ -109,10 +105,9 @@ function moveCardFunc() {
   // console.log(placeType)  
   document.querySelector(placeType).src = moveSRC
   this.src = ''
-  card1 = 0
-  console.table(hand)
-  console.table(nick)
-  console.table(type)
+  // console.table(hand)
+  // console.table(nick)
+  // console.table(type)
   // console.log(this.classList[1])
   this.classList1
   

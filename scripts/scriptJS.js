@@ -58,7 +58,11 @@ function takeCard() {
   // to pick up a random card from the deck and put it in the hand
   // hand.splice(0,0,deck [Math.floor(Math.random()*deck.length)])
   // o++
-  const nick = hand.map(hand => `${hand.nick}`)
+  const nick = hand.map(hand => `${hand.nick}`).reverse()
+  console.log(nick[0]);
+  console.log(nick);
+  console.log(hand);
+  
   const name = [`./images/cards/${nick[0]}.svg`]
   const image = name
 
@@ -100,19 +104,19 @@ for (card of moveCard){
 }
 function moveCardFunc() {
   let getIndex = this.classList[1].substr(4)
-  console.log(hand)
-  const nick = hand.map(hand => `${hand.nick}`).reverse()
-  const type = hand.map(hand => `${hand.type}`).reverse()
+  // console.log(hand)
+  const nick = hand.map(hand => `${hand.nick}`)
+  const type = hand.map(hand => `${hand.type}`)
   const moveSRC = [`./images/cards/${nick[parseInt(getIndex-1)]}.svg`]
   const placeType = '.' + type[0]
-  console.log(placeType)  
+  // console.log(placeType)  
   document.querySelector(placeType).src = moveSRC
   this.src = ''
   card1 = 0
   console.table(hand)
   console.table(nick)
   console.table(type)
-  console.log(this.classList[1])
+  // console.log(this.classList[1])
   this.classList1
   
   if (this.classList[1] === "card1") {

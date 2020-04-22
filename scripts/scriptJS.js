@@ -143,6 +143,12 @@ function moveCardFunc() {
     card6 = 0    
   }
 }
-const scroreRobin = 0
-const counter = document.querySelector('.overlay')
-const speedContainer = document.querySelector('.speed')
+const  balAttack = document.querySelector('.balAttack')
+const  robAttack = document.querySelector('.robAttack')
+const  melAttack = document.querySelector('.melAttack')
+const  gasAttack = document.querySelector('.gasAttack')
+card.addEventListener('click')(){
+if (melAttack.addEventListener('click')() {
+  const click = 1
+}
+}

@@ -4,7 +4,7 @@ let playerName = document.querySelector('.player_4')
 const inputName = document.querySelector('.inputName')
 const confirmButton = document.querySelector('.confirmButton')
 const playerPseudo = document.querySelector('.playerPseudo')
-
+const placeSpeed = document.querySelector('slot2')
 
 
 
@@ -463,7 +463,14 @@ const randomCard = Math.ceil(Math.random()*106)
 var i = 1;
 let card = document.querySelector('.card')
 let hand = []
-// takeCard()
+const fro = document.querySelector('.fro')
+fro.addEventListener('click',(event) => {
+takeCard()
+})
+
+
+
+
 function takeCard() {
   hand.splice(1,0,deck [Math.ceil(Math.random()*106)-1])
   
@@ -473,22 +480,30 @@ function takeCard() {
   hand.splice(5,1,deck [Math.ceil(Math.random()*106)-1])
   hand.splice(6,1,deck [Math.ceil(Math.random()*106)-1])
   const nick = hand.map(hand => `${hand.nick}`)
-  // console.log(nick)
+  console.log(nick)
   const chaine2 = nick[1]
-  
   const image = chaine1+chaine2+chaine3
   const place = ".card" + i
   document.querySelector(place).src = image
-  console.log(place);
+  //console.log(place)
   i++
   if(i == 7)
   i = 1;
-  console.log(i);
-  
-  
+  //console.log(i)
+  let draggedItems = null
+  const type = hand.map(hand => `${hand.type}`)
+      card.addEventListener('dragstart',(event) => {
+        draggedItems = this
+        this.style.display = 'none'
+        console.log(dragstart, event)
+})
+placeSpeed.addEventListener('dragend',(event) => {
+  draggedItems = null
+  console.log(dragstart, event)
+})
 }
   // console.log(image)
   // console.log (chaine2)
 
-
+  
 // console.log (Array.map);

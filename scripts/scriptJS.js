@@ -1,16 +1,26 @@
-// Creating variables to create the event
+// Creating variables from the overlay
 
-let playerName = document.querySelector('.player_4')
-const inputName = document.querySelector('.inputName')
+const pseudoInput = document.querySelector('.pseudoInput')
 const confirmButton = document.querySelector('.confirmButton')
-const playerPseudo = document.querySelector('.playerPseudo')
+const playerName = document.querySelector('.name_player')
+const overlay = document.querySelector('.overlay_name')
 
+// Put the player name in the right place and remove the overlay when click on confirm 
 
+confirmButton.addEventListener('click', () =>
+{
+   console.log(pseudoInput.value)
+   playerName.textContent = `${pseudoInput.value} (you)`
+   
+   // The player can't confirm if he doesn't enter a value
 
+   if(pseudoInput.value != 0)
+   {
+   overlay.style.display = 'none'
+   }
+})
 
-
-
-let deck = [
+const deck = [
   {
       nick: 'card_coffee',
       id: '1',
@@ -455,40 +465,37 @@ let deck = [
       }
 ];
 
-const chaine1 = ['./images/cards/']
-const chaine3 = ['.svg']
 console.log(deck)
 const randomCard = Math.ceil(Math.random()*106)
 
-var i = 1;
-let card = document.querySelector('.card')
-let hand = []
-// takeCard()
-function takeCard() {
+let i = 1;
+
+// Je crois que le card ne sert à rien 
+// const card = document.querySelector('.card')
+
+function takeCard() 
+{
+  const hand = []
   hand.splice(1,0,deck [Math.ceil(Math.random()*106)-1])
-  
   hand.splice(2,1,deck [Math.ceil(Math.random()*106)-1])
   hand.splice(3,1,deck [Math.ceil(Math.random()*106)-1])
   hand.splice(4,1,deck [Math.ceil(Math.random()*106)-1])
   hand.splice(5,1,deck [Math.ceil(Math.random()*106)-1])
   hand.splice(6,1,deck [Math.ceil(Math.random()*106)-1])
   const nick = hand.map(hand => `${hand.nick}`)
-  // console.log(nick)
-  const chaine2 = nick[1]
-  
-  const image = chaine1+chaine2+chaine3
-  const place = ".card" + i
+  const chain1 = ['./images/cards/']
+  const chain2 = nick[1]
+  const chain3 = ['.svg']
+  const image = chain1+chain2+chain3
+  const place = '.card' + i
   document.querySelector(place).src = image
   console.log(place);
   i++
   if(i == 7)
-  i = 1;
-  console.log(i);
-  
-  
+  {
+    i = 1;
+  }
 }
   // console.log(image)
   // console.log (chaine2)
-
-
 // console.log (Array.map);

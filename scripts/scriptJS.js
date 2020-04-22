@@ -7,18 +7,18 @@ const overlay = document.querySelector('.overlayName')
 
 // Put the player name in the right place and remove the overlay when click on confirm 
 
-confirmButton.addEventListener('click', () =>
-{
-   console.log(pseudoInput.value)
-   playerName.textContent = `${pseudoInput.value} (you)`
+// confirmButton.addEventListener('click', () =>
+// {
+//    console.log(pseudoInput.value)
+//    playerName.textContent = `${pseudoInput.value} (you)`
    
-   // The player can't confirm if he doesn't enter a value
+//    // The player can't confirm if he doesn't enter a value
 
-   if(pseudoInput.value != 0)
-   {
-   overlay.style.display = 'none'
-   }
-})
+//    if(pseudoInput.value != 0)
+//    {
+//    overlay.style.display = 'none'
+//    }
+// })
 
 const deck = [
   {
@@ -471,10 +471,13 @@ const randomCard = Math.ceil(Math.random()*106)
 var i = 1;
 let card = document.querySelector('.card')
 let hand = []
+
+// fro, ça veut dire quoi ??
 const fro = document.querySelector('.fro')
 fro.addEventListener('click',(event) => {
 takeCard()
 })
+
 
 
 
@@ -500,6 +503,52 @@ function takeCard() {
     i = 1;
   }
 }
-  // console.log(image)
-  // console.log (chaine2)
-// console.log (Array.map);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const moveCard = document.querySelector('.card1')
+moveCard.addEventListener('click',(event) => {
+moveCardFunc()
+})
+function moveCardFunc() {
+  console.log(hand);
+  const nick = hand.map(hand => `${hand.nick}`)
+  const type = hand.map(hand => `${hand.type}`)
+  const nameChan1 = ['./images/cards/']
+  const nameChain2 = nick[1]
+  console.log(nameChain2);
+  const nameChain3 = ['.svg']
+  const moveSRC = nameChan1 + nameChain2 + nameChain3
+  const placeType = '.' + type[1]
+  console.log(placeType);  
+  document.querySelector(placeType).src = moveSRC
+  document.querySelector('.card1').src = ''
+}
+

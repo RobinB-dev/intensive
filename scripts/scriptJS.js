@@ -478,6 +478,15 @@ fro.addEventListener('click',(event) => {
 takeCard()
 })
 
+
+let memCard1 = 0
+let memCard2 = 0
+let memCard3 = 0
+let memCard4 = 0
+let memCard5 = 0
+let memCard6 = 0
+
+
 function takeCard() {
   hand.splice(1,0,deck [Math.ceil(Math.random()*106)-1])
   hand.splice(2,1,deck [Math.ceil(Math.random()*106)-1])
@@ -489,18 +498,30 @@ function takeCard() {
   const chain1 = ['./images/cards/']
   const chain2 = nick[1]
   const chain3 = ['.svg']
+  // const place = '.card' + i
   const image = chain1+chain2+chain3
-  const place = '.card' + i
-  document.querySelector(place).src = image
   //console.log(place)
   i++
-  if(i == 7)
-  {
-    i = 1;
+  if (memCard1 == 0) {
+    document.querySelector('.card1').src = image
+    memCard1 = 1    
+  } else if (memCard2 == 0) {
+    document.querySelector('.card2').src = image
+    memCard2 = 1    
+  } else if (memCard3 == 0) {
+    document.querySelector('.card3').src = image
+    memCard3 = 1    
+  } else if (memCard4 == 0) {
+    document.querySelector('.card4').src = image
+    memCard4 = 1    
+  } else if (memCard5 == 0) {
+    document.querySelector('.card5').src = image
+    memCard5 = 1    
+  } else if (memCard6 == 0) {
+    document.querySelector('.card6').src = image
+    memCard6 = 1    
   }
 }
-
-
 
 
 

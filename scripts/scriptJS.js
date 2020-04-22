@@ -494,13 +494,10 @@ let card4 = 0
 let card5 = 0
 let card6 = 0
 
-let o = 0
 function takeCard() {
   const card = deck.pop()
   hand.push(card)
   // to pick up a random card from the deck and put it in the hand
-  // hand.splice(0,0,deck [Math.floor(Math.random()*deck.length)])
-  // o++
   const nick = hand.map(hand => `${hand.nick}`)
   const name = [`./images/cards/${nick[0]}.svg`]
   const image = name
@@ -525,12 +522,9 @@ function takeCard() {
     document.querySelector('.card6').src = image
     card6 = 1    
   }
-
-// const id = hand.map(hand => `${hand.id}`)
-// const placeId = id[1]
-// // j = 0
-// // j++
-// deck.splice(placeId-j,1)
+  console.log(card1)
+  console.log(card2)
+  console.log(card3)
 console.log(hand)
 }
 

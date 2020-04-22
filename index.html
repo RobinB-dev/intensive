@@ -10,6 +10,11 @@
 
 
 <body>
+    <div class="overlay_name">
+        <span class="pseudo">Quel est votre pseudo ?</span>
+        <input type="text" class="pseudoInput" placeholder="Quel est votre pseudo ?" required minlength="3" maxlength="12">
+        <div class="confirmButton"><span class="confirm">Confirmer</span></div>
+    </div>
     <div class="containerGame">
         <div class="gridButtons">
             <div></div>
@@ -141,7 +146,7 @@
             <div class="boxShadow">
                 <div class="slot1 profil">
                     <div class="overlay">375</div>
-                    <h2>Robin</h2>
+                    <h2 class="name_player">Robin</h2>
                     <img class="avatar" src="./images/picUser.svg" alt="">
                 </div>
                 <div class="slot2">
@@ -193,7 +198,6 @@
                 <img class="myCards card6" src="" alt="">
                 <div></div>                
             </div>
-
         </div>
     </div>
     <script src="./scripts/scriptJS.js"></script>

@@ -6,7 +6,8 @@
 }
 body{
     margin-top: 50px;
-    background-color: #D71A2215;
+    background-image: url("../images/background.svg");
+    background-color: #FBFAFE;
 }
 .carousel-container{
     width: 972px;

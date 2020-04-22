@@ -20,7 +20,8 @@ const overlay = document.querySelector('.overlayName')
 //    }
 // })
 
-const deck = [
+//Table with 106 cards, attribut : nick, id, type
+let deck = [
   {
       nick: 'card_coffee',
       id: '1',
@@ -104,12 +105,12 @@ const deck = [
   id: '19',
   type: 'defense'
 },
-  {
-      nick: 'card_meeting',
-      id: '20',
-      type: 'defense'
-  },
-  {
+{
+  nick: 'card_meeting',
+  id: '20',
+  type: 'defense'
+},
+{
     nick: 'card_pinterest',
     id: '21',
     type: 'defense'
@@ -463,22 +464,29 @@ const deck = [
       id: '106',
       type: 'asset'
       }
-];
+]
 
-console.log(deck)
-const randomCard = Math.ceil(Math.random()*106)
+function shuffle(a) {
+  for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+deck = shuffle(deck)
 
-let i = 1;
+
+//images of the card
 let card = document.querySelector('.card')
 let hand = []
 
-// fro, ça veut dire quoi ??
-const fro = document.querySelector('.fro')
-fro.addEventListener('click',(event) => {
+
+const clickDeck = document.querySelector('.fro')
+clickDeck.addEventListener('click',(event) => {
 takeCard()
 })
 
-
+//card slot (positions)
 let card1 = 0
 let card2 = 0
 let card3 = 0
@@ -488,21 +496,16 @@ let card6 = 0
 
 let o = 0
 function takeCard() {
-  hand.splice(0,0,deck [Math.ceil(Math.random()*106-o)-1])
-  o++
-  // hand.splice(2,1,deck [Math.ceil(Math.random()*106)-1])
-  // hand.splice(3,1,deck [Math.ceil(Math.random()*106)-1])
-  // hand.splice(4,1,deck [Math.ceil(Math.random()*106)-1])
-  // hand.splice(5,1,deck [Math.ceil(Math.random()*106)-1])
-  // hand.splice(6,1,deck [Math.ceil(Math.random()*106)-1])
+  const card = deck.pop()
+  hand.push(card)
+  // to pick up a random card from the deck and put it in the hand
+  // hand.splice(0,0,deck [Math.floor(Math.random()*deck.length)])
+  // o++
   const nick = hand.map(hand => `${hand.nick}`)
-  const chain1 = ['./images/cards/']
-  const chain2 = nick[0]
-  const chain3 = ['.svg']
-  // const place = '.card' + i
-  const image = chain1+chain2+chain3
-  //console.log(place)
-  i++
+  const name = [`./images/cards/${nick[0]}.svg`]
+  const image = name
+
+  // if it's true the card goes in the hand
   if (card1 == 0) {
     document.querySelector('.card1').src = image
     card1 = 1    
@@ -522,43 +525,14 @@ function takeCard() {
     document.querySelector('.card6').src = image
     card6 = 1    
   }
-  // console.log(this.classList[1].substr(4));
-// console.log(hand);
-const id = hand.map(hand => `${hand.id}`)
-const placeId = id[1]
-// console.log(placeId)
-// console.log(deckOne)
-j = 0
-j++
-deck.splice(placeId-j,1)
-console.log(deck)
-// console.log(deckOne.indexOf(hand[1]))
 
+// const id = hand.map(hand => `${hand.id}`)
+// const placeId = id[1]
+// // j = 0
+// // j++
+// deck.splice(placeId-j,1)
+console.log(hand)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -568,13 +542,13 @@ for (card of moveCard){
   card.addEventListener('click', moveCardFunc)
 }
 function moveCardFunc() {
-  var getIndex = this.classList[1].substr(4)
-  console.log(hand);
+  let getIndex = this.classList[1].substr(4)
+  console.log(hand)
   const nick = hand.map(hand => `${hand.nick}`).reverse()
   const type = hand.map(hand => `${hand.type}`).reverse()
   const moveSRC = [`./images/cards/${nick[parseInt(getIndex-1)]}.svg`]
   const placeType = '.' + type[0]
-  console.log(placeType);  
+  console.log(placeType)  
   document.querySelector(placeType).src = moveSRC
   this.src = ''
   card1 = 0

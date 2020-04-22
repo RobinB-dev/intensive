@@ -13,15 +13,80 @@
 body{
     background-image: url("../images/background.svg");
     background-color: var(--cream);
-    font-family: Comfortaa;
+    font-family: 'Comfortaa', cursive;
     user-select: none;
 }
+
+/*************
+
+    OVERLAY
+*************/
+
+.overlayName{
+    width: 960px;
+    position: absolute;
+    margin-top: 250px;
+    margin-left: 190px;
+    padding-top: 45px;
+    border-radius: 30px;
+    color: var(--blue);
+    background: var(--white);
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pseudo{
+    font-weight: 700;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+}
+
+.pseudoInput{
+  width: 140px;
+  height: 50px;
+  margin: 20px 0;
+  padding: 0 5px;
+  border-radius: 6px;
+  border: 2px solid var(--bluePastel);
+  text-align: center;
+  font-style: 20px;
+  font-weight: 300;
+  color: var(--black);
+  outline: none;
+}
+
+.confirmButton{
+    width: 150px;
+    height: 30px;
+    margin-bottom: 20px;
+    background: var(--bluePastel);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow:  15px 15px 30px #c9d0d8, 
+    -15px -15px 30px #ffffff;
+    cursor: pointer;
+}
+
+.confirmButton:hover{
+    -webkit-transform: scale(1.1);
+}
+
+/*************
+
+MIDDLE GRID
+
+*************/
 
 h1{
     margin: 0;
     font-size: 20px;
     color: var(--blue) ;
-    font-family: 'Comfortaa', cursive;
     font-weight: 400;
 }
 
@@ -29,7 +94,6 @@ h2{
     margin: 0;
     font-size: 15px;
     color: var(--blue) ;
-    font-family: 'Comfortaa', cursive;
     font-weight: 400;
 }
 .containerGame
@@ -108,7 +172,6 @@ h2{
     justify-content: center;
     align-self: center;
     justify-self: center;
-    font-family: 'Comfortaa', cursive;
     font-weight: 400;
     color: var(--blue);
 }
@@ -197,6 +260,12 @@ h2{
     height: 120px;
 }
 
+/*************
+
+FOOTER GRID
+
+*************/ 
+
 .designMyCards{
     grid-column: 1 / -1;
     margin-top: 10px;
@@ -228,59 +297,4 @@ h2{
 .myCards:hover{
     transform: translate(0px, -80px);
     transition: all 0.5s ease;
-}
-
-.overlay_name{
-    width: 960px;
-    position: absolute;
-    margin-top: 250px;
-    margin-left: 190px;
-    padding-top: 45px;
-    border-radius: 30px;
-    color: var(--blue);
-    background: var(--white);
-    z-index: 11;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.pseudo{
-    font-weight: 700;
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-    justify-self: center;
-}
-
-.pseudoInput{
-  width: 140px;
-  height: 50px;
-  margin: 20px 0;
-  padding: 0 5px;
-  border-radius: 6px;
-  border: 2px solid var(--bluePastel);
-  text-align: center;
-  font-style: 20px;
-  font-weight: 300;
-  color: var(--black);
-  outline: none;
-}
-
-.confirmButton{
-    width: 150px;
-    height: 30px;
-    margin-bottom: 20px;
-    background: var(--bluePastel);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    box-shadow:  15px 15px 30px #c9d0d8, 
-    -15px -15px 30px #ffffff;
-    cursor: pointer;
-}
-
-.confirmButton:hover{
-    -webkit-transform: scale(1.1);
 }

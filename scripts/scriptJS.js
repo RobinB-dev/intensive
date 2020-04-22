@@ -3,7 +3,7 @@
 const pseudoInput = document.querySelector('.pseudoInput')
 const confirmButton = document.querySelector('.confirmButton')
 const playerName = document.querySelector('.name_player')
-const overlay = document.querySelector('.overlay_name')
+const overlay = document.querySelector('.overlayName')
 
 // Put the player name in the right place and remove the overlay when click on confirm 
 

@@ -153,8 +153,6 @@ function moveCardFunc()
     {
       card1 = 0
       clean = '.card1'
-      // console.log('nutella');
-      // console.log(clean);
     } 
     else if (lastFive == '.card2'){
       card2 = 0
@@ -205,78 +203,21 @@ function moveCardFunc()
       document.querySelectorAll('.speed').forEach(function(e) {e.style.backgroundColor=''});
       document.querySelectorAll('.asset').forEach(function(e) {e.style.backgroundColor=''});
     }
-
+    console.log(firstFour);
+    
     if (firstFour == 'card') 
     {
       document.querySelector(lastFour).src = moveSRC
       document.querySelector(clean).src = ''
     } 
-    else {      
+    else if (firstFour == 'trsh'){
+      document.querySelector(clean).src = ''
     }
   }
-  // place2 (groume, type, moveSRC)
-
-  // document.querySelector('.attack').addEventListener("click", function(){
-  //   place2 (groume, type, moveSRC);
-  // // }, false);
 }
 
 
 
-function place2 (groume, type, moveSRC)
-{
-  console.log("pizza");  
-  if (groume === 'card1') 
-  {
-    placeType = '.' + type[0]
-    document.querySelector(placeType).src = moveSRC
-    card1 = 0
-  } 
-  else if (groume === 'card2') 
-  {
-    placeType = '.' + type[1]
-    document.querySelector(placeType).src = moveSRC
-    card2 = 0
-  } 
-  else if (groume === 'card3') 
-  {
-    placeType = '.' + type[2]
-    document.querySelector(placeType).src = moveSRC
-    card3 = 0
-  } 
-  else if (groume === 'card4') 
-  {
-    placeType = '.' + type[3]
-    document.querySelector(placeType).src = moveSRC
-    card4 = 0
-  } 
-  else if (groume === 'card5') 
-  {
-    placeType = '.' + type[4]
-    document.querySelector(placeType).src = moveSRC
-    card5 = 0
-  } 
-  else if (groume === 'card6') 
-  {
-    placeType = '.' + type[5]
-    document.querySelector(placeType).src = moveSRC
-    card6 = 0    
-  }
-}
-
-
-function place3 ()
-{
-  console.log("fromage");  
-  document.querySelector('.bin').addEventListener("click", place4);
-  document.querySelector('.speed').style.backgroundColor = "#79b8ff18";
-}
-
-function place4 ()
-{
-  console.log("raclette"); 
-  document.querySelector('.fro').style.backgroundColor = "#79b8ff18";
-}
 
 const  player1Attack = document.querySelector('.player1Attack')
 const  player3Attack = document.querySelector('.player3Attack')

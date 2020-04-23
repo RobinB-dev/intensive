@@ -7,18 +7,18 @@ const overlay = document.querySelector('.overlayName')
 
 // Put the player name in the right place and remove the overlay when click on confirm 
 
-confirmButton.addEventListener('click', () =>
-{
-   console.log(pseudoInput.value)
-   playerName.textContent = `${pseudoInput.value} (you)`
+// confirmButton.addEventListener('click', () =>
+// {
+//    console.log(pseudoInput.value)
+//    playerName.textContent = `${pseudoInput.value} (you)`
    
-   // The player can't confirm if he doesn't enter a value
+//    // The player can't confirm if he doesn't enter a value
 
-  if(pseudoInput.value != 0)
-  {
-    overlay.style.display = 'none'
-  }
-})
+//   if(pseudoInput.value != 0)
+//   {
+//     overlay.style.display = 'none'
+//   }
+// })
 
 //Table with 106 cards, attribut : nick, id, type
 

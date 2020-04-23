@@ -12,21 +12,23 @@
     --buttonColor: #EDF5FE;
     --h2Color: #79B7FF;
     --borderWhite: #FFFFFF;
+    --myCards: #F6F4FE
 
 }
 
 [data-theme="dark"] 
 {
-    --pinkPastel : #1C314D;
-    --blue: #0057CC;
-    --bluePastel: #000000;
+    --pinkPastel : #2c2c2ca1;
+    --blue: #EDF5FE;
+    --bluePastel: #4E58AB;
     --cream: #141D26;
     --black: #272727;
     --white: #FFFFFF;
-    --boxshadow: #0C1B30;
-    --buttonColor: #0057CC;
-    --h2Color: #FFFFFF;
+    --boxshadow: #2c2c2c;
+    --buttonColor: #4E58AB;
+    --h2Color: #a8b1ff;
     --borderWhite: #0C1B30;
+    --myCards: #061237
 }
 
 body{
@@ -263,7 +265,10 @@ h2{
 .emoteButton{
     width: 65px;
     height: 65px;
-    background: var(--buttonColor);
+    background: var(--buttonColor);    
+    border: 5px solid var(--borderWhite);
+    box-shadow:  5px 5px 10px var(--boxshadow), 
+    -5px -5px 10px var(--boxshadow);
     border-radius: 100px;
     display: flex;
     align-self: center;
@@ -277,6 +282,7 @@ h2{
 }
 .emote{
     width: 80%;
+    color: red;
 }
 
 
@@ -295,7 +301,7 @@ FOOTER GRID
 .designMyCards{
     grid-column: 1 / -1;
     margin-top: 10px;
-    background: var(--pinkPastel);
+    background: var(--myCards);
     box-shadow: 0 0 0px var(--black);
     text-align: center;
     box-shadow:  0px -5px 10px var(--boxshadow);

@@ -120,17 +120,17 @@ function moveCardFunc() {
   // this.src = ''
   // const groume = this.classList[1]
   
-  
+  let scorePlayer2 = 0
   
   window.onclick = function(e) {
     const newPlace = e.srcElement.className;    
-
     const lastFour = '.' + newPlace.substr(newPlace.length - 4);
     const firstFour = newPlace.substring(0, 4);
     const typeCard = type[parseInt(newPlace.substr(newPlace.length - 1)) - 1];
     const distanceCard = distance[parseInt(newPlace.substr(newPlace.length - 1)) - 1];
-    console.log(distanceCard);
-    console.log(typeCard);
+    // console.log(distanceCard);
+    // console.log(typeCard);
+    // console.log(scorePlayer2);
     
     if (typeCard == 'attack' || typeCard == 'defense') {
       document.querySelectorAll('.attack').forEach(function(e) {e.style.backgroundColor='#79b8ff18'});

@@ -1,3 +1,9 @@
+
+var img = document.querySelectorAll("img");
+img.onerror = function () { 
+    this.style.display = "none";
+}
+
 // Creating variables from the overlay
 
 const pseudoInput = document.querySelector('.pseudoInput')
@@ -108,43 +114,99 @@ function moveCardFunc() {
   const nick = hand.map(hand => `${hand.nick}`)
   const type = hand.map(hand => `${hand.type}`)
   const moveSRC = [`./images/cards/${nick[parseInt(getIndex-1)]}.svg`]
-  console.log(type)
+
+  // this.style.transform = "translate(0px, -80px)";
+  // this.src = ''
+  // const groume = this.classList[1]
   
-  this.src = ''
-  // console.table(hand)
-  // console.table(nick)
-  // console.table(type)
-  // console.log(this.classList[1])
-  this.classList1
   
-  if (this.classList[1] === "card1") {
+  
+  window.onclick = function(e) {
+    const newPlace = e.srcElement.className;    
+    const lastFour = '.' + newPlace.substr(newPlace.length - 4);
+    const firstFour = newPlace.substring(0, 4);
+    const typeCard = type[parseInt(newPlace.substr(newPlace.length - 1)) - 1];
+    console.log(typeCard);
+    
+    if (typeCard == 'attack' || typeCard == 'defense') {
+      document.querySelectorAll('.attack').forEach(function(e) {e.style.backgroundColor='#79b8ff18'});
+      document.querySelectorAll('.speed').forEach(function(e) {e.style.backgroundColor=''});
+      document.querySelectorAll('.asset').forEach(function(e) {e.style.backgroundColor=''});
+      document.querySelectorAll('.limite').forEach(function(e) {e.style.backgroundColor=''});
+    } else if (typeCard == 'speed'){      
+      document.querySelectorAll('.speed').forEach(function(e) {e.style.backgroundColor='#79b8ff18'});
+      document.querySelectorAll('.attack').forEach(function(e) {e.style.backgroundColor=''});
+      document.querySelectorAll('.asset').forEach(function(e) {e.style.backgroundColor=''});
+      document.querySelectorAll('.limite').forEach(function(e) {e.style.backgroundColor=''});
+    } else if (typeCard == 'asset'){      
+      document.querySelectorAll('.asset').forEach(function(e) {e.style.backgroundColor='#79b8ff18'});
+      document.querySelectorAll('.attack').forEach(function(e) {e.style.backgroundColor=''});
+      document.querySelectorAll('.speed').forEach(function(e) {e.style.backgroundColor=''});
+      document.querySelectorAll('.limite').forEach(function(e) {e.style.backgroundColor=''});
+    } else if (typeCard == 'limite'){      
+      document.querySelectorAll('.limite').forEach(function(e) {e.style.backgroundColor='#79b8ff18'});
+      document.querySelectorAll('.attack').forEach(function(e) {e.style.backgroundColor=''});
+      document.querySelectorAll('.speed').forEach(function(e) {e.style.backgroundColor=''});
+      document.querySelectorAll('.asset').forEach(function(e) {e.style.backgroundColor=''});
+    }
+
+    if (firstFour == 'card') {
+      document.querySelector(lastFour).src = moveSRC
+    } else {      
+    }
+  }
+  // place2 (groume, type, moveSRC)
+
+  // document.querySelector('.attack').addEventListener("click", function(){
+  //   place2 (groume, type, moveSRC);
+  // }, false);
+}
+
+
+
+function place2 (groume, type, moveSRC){
+  console.log("pizza");  
+  if (groume === 'card1') {
     placeType = '.' + type[0]
     document.querySelector(placeType).src = moveSRC
     card1 = 0
-  } else if (this.classList[1] === "card2") {
+  } else if (groume === 'card2') {
     placeType = '.' + type[1]
     document.querySelector(placeType).src = moveSRC
     card2 = 0
-  } else if (this.classList[1] === "card3") {
+  } else if (groume === 'card3') {
     placeType = '.' + type[2]
     document.querySelector(placeType).src = moveSRC
     card3 = 0
-  } else if (this.classList[1] === "card4") {
+  } else if (groume === 'card4') {
     placeType = '.' + type[3]
     document.querySelector(placeType).src = moveSRC
     card4 = 0
-  } else if (this.classList[1] === "card5") {
+  } else if (groume === 'card5') {
     placeType = '.' + type[4]
     document.querySelector(placeType).src = moveSRC
     card5 = 0
-  } else if (this.classList[1] === "card6") {
+  } else if (groume === 'card6') {
     placeType = '.' + type[5]
     document.querySelector(placeType).src = moveSRC
     card6 = 0    
   }
 }
+
+
+function place3 (){
+  console.log("fromage");  
+  document.querySelector('.bin').addEventListener("click", place4);
+  document.querySelector('.speed').style.backgroundColor = "#79b8ff18";
+}
+
+function place4 (){
+  console.log("raclette"); 
+  document.querySelector('.fro').style.backgroundColor = "#79b8ff18";
+}
+
 const  player1Attack = document.querySelector('.player1Attack')
 const  player3Attack = document.querySelector('.player3Attack')
 const  player4Attack = document.querySelector('.player4Attack')
 
-console.log(player3Attack)
+// console.log(player3Attack)

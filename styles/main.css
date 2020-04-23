@@ -206,9 +206,12 @@ h2{
 
 .slot1{
     height: 136px;
+    border-radius: 5px;
 }
 .slot2{ 
-    cursor: pointer;
+    height: 136px;
+    border-radius: 5px;
+    /* cursor: pointer; */
 }
 .hold{
     border: solid #cccccc 4px;
@@ -255,7 +258,9 @@ h2{
     width: 80%;
 }
 
+
 .card{
+    border-radius: 5px;
     width: 86px;
     height: 120px;
 }
@@ -298,3 +303,4 @@ FOOTER GRID
     transform: translate(0px, -80px);
     transition: all 0.5s ease;
 }
+

@@ -1,4 +1,4 @@
-# intensiveJS
+# milleBoards
 https://robinb-dev.github.io/milleBoards/
 Test: Philippe
 Test : Alexandra

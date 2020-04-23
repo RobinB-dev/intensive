@@ -233,6 +233,17 @@ clickTrash.addEventListener('click', (event) => {
 ////// DARKMODE
 
 const darkMode = document.querySelector('.buttonNight')
+const picUser = document.querySelector('.user')
+const picBot1 = document.querySelector('.bot1')
+const picBot2 = document.querySelector('.bot2')
+const picBot3 = document.querySelector('.bot3')
+const containerUser = document.querySelector('.containerUser')
+
+
+console.log(picUser)
+console.log(picBot1)
+console.log(picBot2)
+console.log(picBot3)
 let count = 0
 darkMode.addEventListener('click', () => 
 {
@@ -240,6 +251,7 @@ darkMode.addEventListener('click', () =>
   if(count%2 != 0)
   {
     document.documentElement.setAttribute('data-theme', 'dark');
+    picUser.style.backgroundImage = ['../images/picUserDark.svg']
   }
   else
   {

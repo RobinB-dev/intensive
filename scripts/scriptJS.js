@@ -357,3 +357,16 @@ darkMode.addEventListener('click', () =>
     document.querySelector('.iconMute').src = iconMute + chem2
   }
 })
+
+const buttonCards = document.querySelector('.buttonCards')
+buttonCards.addEventListener('click', () => 
+{
+  const assetDisplay = document.querySelector('.assetDisplay')
+  assetDisplay.style.display = "block"
+
+  const boutonAsset = document.querySelector('.boutonAsset')
+boutonAsset.addEventListener('click', () => 
+{
+  assetDisplay.style.display = "none"
+})
+})

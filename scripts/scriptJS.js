@@ -40,7 +40,7 @@ let card = document.querySelector('.card')
 let hand = []
 
 
-const clickDeck = document.querySelector('.fro')
+const clickDeck = document.querySelector('.pickCard')
 clickDeck.addEventListener('click',(event) => {
 takeCard()
 })
@@ -59,11 +59,7 @@ function takeCard()
   hand.push(card)
 
   // to pick up a random card from the deck and put it in the hand
-  // hand.splice(0,0,deck [Math.floor(Math.random()*deck.length)])
-  // o++
   const nick = hand.map(hand => `${hand.nick}`).reverse()
-
-  // const nick = hand.map(hand => `${hand.nick}`)
   const name = [`./images/cards/${nick[0]}.svg`]
   const image = name
 
@@ -110,7 +106,7 @@ function takeCard()
 }
 
 
-let claen = ''
+let clean = ''
 
 const moveCard = document.querySelectorAll('.myCards')
 for (card of moveCard)
@@ -121,17 +117,11 @@ let placeType = ''
 function moveCardFunc()
 {
   let getIndex = this.classList[1].substr(4)
-  // console.log(hand)
+
   const nick = hand.map(hand => `${hand.nick}`)
   const type = hand.map(hand => `${hand.type}`)
   const distance = hand.map(hand => `${hand.distance}`)
   const moveSRC = [`./images/cards/${nick[parseInt(getIndex-1)]}.svg`]
-
-  // this.style.transform = "translate(0px, -80px)";
-  // this.src = ''
-  // const groume = this.classList[1]
-
-  let scorePlayer2 = 0
 
   window.onclick = function(e)
   {
@@ -141,14 +131,6 @@ function moveCardFunc()
     const firstFour = newPlace.substring(0, 4);
     const typeCard = type[parseInt(newPlace.substr(newPlace.length - 1)) - 1];
     const distanceCard = distance[parseInt(newPlace.substr(newPlace.length - 1)) - 1];
-    // console.log(card1);
-    // console.log(newPlace)
-    // console.log(typeCard);
-    // console.log(scorePlayer2);
-    const trash = []
-
-
-    // console.log(lastFive);
     if (lastFive == '.card1')
     {
       card1 = 0
@@ -203,7 +185,6 @@ function moveCardFunc()
       document.querySelectorAll('.speed').forEach(function(e) {e.style.backgroundColor=''});
       document.querySelectorAll('.asset').forEach(function(e) {e.style.backgroundColor=''});
     }
-    console.log(firstFour);
 
     if (firstFour == 'card')
     {
@@ -222,10 +203,6 @@ function moveCardFunc()
 const  player1Attack = document.querySelector('.player1Attack')
 const  player3Attack = document.querySelector('.player3Attack')
 const  player4Attack = document.querySelector('.player4Attack')
-const clickTrash = document.querySelector('.bin')
-clickTrash.addEventListener('click', (event) => {
-
-})
 // console.log(player3Attack)
 
 

@@ -123,6 +123,7 @@ function moveCardFunc() {
   
   window.onclick = function(e) {
     const newPlace = e.srcElement.className;    
+
     const lastFour = '.' + newPlace.substr(newPlace.length - 4);
     const firstFour = newPlace.substring(0, 4);
     const typeCard = type[parseInt(newPlace.substr(newPlace.length - 1)) - 1];
@@ -143,7 +144,7 @@ function moveCardFunc() {
       document.querySelectorAll('.attack').forEach(function(e) {e.style.backgroundColor=''});
       document.querySelectorAll('.speed').forEach(function(e) {e.style.backgroundColor=''});
       document.querySelectorAll('.limite').forEach(function(e) {e.style.backgroundColor=''});
-    } else if (typeCard == 'limite'){      
+    } else if (typeCard == 'limite' || typeCard == 'limite_def'){      
       document.querySelectorAll('.limite').forEach(function(e) {e.style.backgroundColor='#79b8ff18'});
       document.querySelectorAll('.attack').forEach(function(e) {e.style.backgroundColor=''});
       document.querySelectorAll('.speed').forEach(function(e) {e.style.backgroundColor=''});

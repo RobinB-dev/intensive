@@ -73,10 +73,11 @@ function takeCard() {
 
   // if it's true the card goes in the hand
   if (card1 == 0) {
-    console.log(hand);
+    console.log(card1);
     hand.splice(0, 1, card);
     document.querySelector('.card1').src = image
     card1 = 1    
+    console.log(card1);
   } else if (card2 == 0) {
     hand.splice(1, 1, card);
     document.querySelector('.card2').src = image
@@ -101,7 +102,7 @@ function takeCard() {
 }
 
 
-
+let claen = ''
 
 const moveCard = document.querySelectorAll('.myCards')
 for (card of moveCard){ 
@@ -124,18 +125,40 @@ function moveCardFunc() {
   
   window.onclick = function(e) {
     const newPlace = e.srcElement.className;  
-    console.log(newPlace)  
     const lastFour = '.' + newPlace.substr(newPlace.length - 4);
+    let lastFive = '.' + newPlace.substr(newPlace.length - 5);
     const firstFour = newPlace.substring(0, 4);
-    console.log(lastFour)
     const typeCard = type[parseInt(newPlace.substr(newPlace.length - 1)) - 1];
     const distanceCard = distance[parseInt(newPlace.substr(newPlace.length - 1)) - 1];
-    // console.log(distanceCard);
+    // console.log(card1);
+    // console.log(newPlace)  
     // console.log(typeCard);
     // console.log(scorePlayer2);
     const trash = []
     
     
+    // console.log(lastFive);
+    if (lastFive == '.card1') {
+      card1 = 0
+      clean = '.card1'
+      // console.log('nutella');
+      // console.log(clean);
+    } else if (lastFive == '.card2'){
+      card2 = 0
+      clean = '.card2'
+    } else if (lastFive == '.card3'){
+      card3 = 0
+      clean = '.card3'
+    } else if (lastFive == '.card4'){
+      card4 = 0
+      clean = '.card4'
+    } else if (lastFive == '.card5'){
+      card5 = 0
+      clean = '.card5'
+    } else if (lastFive == '.card6'){
+      card6 = 0
+      clean = '.card6'
+    }
     if (typeCard == 'attack' || typeCard == 'defense') {
       document.querySelectorAll('.attack').forEach(function(e) {e.style.backgroundColor='#79b8ff18'});
       document.querySelectorAll('.speed').forEach(function(e) {e.style.backgroundColor=''});
@@ -160,6 +183,7 @@ function moveCardFunc() {
 
     if (firstFour == 'card') {
       document.querySelector(lastFour).src = moveSRC
+      document.querySelector(clean).src = ''
     } else {      
     }
   }

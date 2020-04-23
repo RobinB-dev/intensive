@@ -458,7 +458,7 @@ let deck = [
     nick: 'card_speed_75',
     id: '77',
     type: 'speed',
-    distance : '50',
+    distance : '75',
   },
   {
     nick: 'card_speed_75',
@@ -518,25 +518,25 @@ let deck = [
     nick: 'card_speed_100',
     id: '87',
     type: 'speed',
-    distance : '75',
+    distance : '100',
   },
   {
     nick: 'card_speed_100',
     id: '88',
     type: 'speed',
-    distance : '75',
+    distance : '100',
   },
   {
     nick: 'card_speed_100',
     id: '89',
     type: 'speed',
-    distance : '75',
+    distance : '100',
   },
   {
     nick: 'card_speed_100',
     id: '90',
     type: 'speed',
-    distance : '75',
+    distance : '100',
   },
   {
     nick: 'card_speed_100',

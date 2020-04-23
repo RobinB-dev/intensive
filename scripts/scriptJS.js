@@ -240,10 +240,20 @@ const picBot3 = document.querySelector('.bot3')
 const containerUser = document.querySelector('.containerUser')
 
 
-console.log(picUser)
-console.log(picBot1)
-console.log(picBot2)
-console.log(picBot3)
+const chem1 = './images/icons/'
+const dark = 'Dark'
+const chem2 = '.svg'
+const iconBook = chem1 + 'iconBook'
+const iconCard = chem1 + 'iconCard'
+const iconMute = chem1 + 'iconMute'
+const iconVolume = chem1 + 'iconVolume'
+const iconMoon = chem1 + 'iconMoon'
+const iconSun = chem1 + 'iconSun'
+const iconBot1 = chem1 + 'iconBot1'
+const iconBot2 = chem1 + 'iconBot2'
+const iconBot3 = chem1 + 'iconBot3'
+const iconUser = chem1 + 'iconUser'
+
 let count = 0
 darkMode.addEventListener('click', () => 
 {
@@ -251,11 +261,28 @@ darkMode.addEventListener('click', () =>
   if(count%2 != 0)
   {
     document.documentElement.setAttribute('data-theme', 'dark');
-    picUser.style.backgroundImage = ['../images/picUserDark.svg']
+    document.querySelector('.iconBook').src = iconBook + dark + chem2
+    document.querySelector('.iconCard').src = iconCard + dark + chem2
+    document.querySelector('.iconMute').src = iconMute + dark + chem2
+    document.querySelector('.iconSun').src = iconSun + dark + chem2
+    document.querySelector('.bot1').src = iconBot1 + dark + chem2
+    document.querySelector('.bot2').src = iconBot2 + dark + chem2
+    document.querySelector('.bot3').src = iconBot3 + dark + chem2
+    document.querySelector('.user').src = iconUser + dark + chem2
+    
+    
   }
   else
   {
     document.documentElement.setAttribute('data-theme', 'light');
+    document.querySelector('.iconBook').src = iconBook + chem2
+    document.querySelector('.iconCard').src = iconCard + chem2
+    document.querySelector('.iconMute').src = iconMute + chem2
+    document.querySelector('.iconMoon').src = iconMoon + chem2
+    document.querySelector('.bot1').src = iconBot1 + chem2
+    document.querySelector('.bot2').src = iconBot2 + chem2
+    document.querySelector('.bot3').src = iconBot3 + chem2
+    document.querySelector('.user').src = iconUser + chem2
   }
 })
 

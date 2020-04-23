@@ -216,7 +216,7 @@ h2{
     display: flex;
     align-self: flex-end;
     justify-self: center;
-    
+    opacity: 60%;
 }
 
 .avat2{

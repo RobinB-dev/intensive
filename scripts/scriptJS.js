@@ -113,6 +113,7 @@ function moveCardFunc() {
   // console.log(hand)
   const nick = hand.map(hand => `${hand.nick}`)
   const type = hand.map(hand => `${hand.type}`)
+  const distance = hand.map(hand => `${hand.distance}`)
   const moveSRC = [`./images/cards/${nick[parseInt(getIndex-1)]}.svg`]
 
   // this.style.transform = "translate(0px, -80px)";
@@ -127,6 +128,8 @@ function moveCardFunc() {
     const lastFour = '.' + newPlace.substr(newPlace.length - 4);
     const firstFour = newPlace.substring(0, 4);
     const typeCard = type[parseInt(newPlace.substr(newPlace.length - 1)) - 1];
+    const distanceCard = distance[parseInt(newPlace.substr(newPlace.length - 1)) - 1];
+    console.log(distanceCard);
     console.log(typeCard);
     
     if (typeCard == 'attack' || typeCard == 'defense') {
@@ -160,7 +163,7 @@ function moveCardFunc() {
 
   // document.querySelector('.attack').addEventListener("click", function(){
   //   place2 (groume, type, moveSRC);
-  // }, false);
+  // // }, false);
 }
 
 

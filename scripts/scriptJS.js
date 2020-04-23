@@ -5,13 +5,13 @@ const confirmButton = document.querySelector('.confirmButton')
 const playerName = document.querySelector('.name_player')
 const overlay = document.querySelector('.overlayName')
 
-// Put the player name in the right place and remove the overlay when click on confirm 
+// Put the player name in the right place and remove the overlay when click on confirm
 
 // confirmButton.addEventListener('click', () =>
 // {
 //    console.log(pseudoInput.value)
 //    playerName.textContent = `${pseudoInput.value} (you)`
-   
+
 //    // The player can't confirm if he doesn't enter a value
 
 //   if(pseudoInput.value != 0)
@@ -23,9 +23,9 @@ const overlay = document.querySelector('.overlayName')
 //Table with 106 cards, attribut : nick, id, type
 
 
-function shuffle(a) 
+function shuffle(a)
 {
-  for (let i = a.length - 1; i > 0; i--) 
+  for (let i = a.length - 1; i > 0; i--)
   {
       const j = Math.floor(Math.random() * (i + 1));
       [a[i], a[j]] = [a[j], a[i]];
@@ -53,7 +53,7 @@ let card4 = 0
 let card5 = 0
 let card6 = 0
 
-function takeCard() 
+function takeCard()
 {
   const card = deck.pop()
   hand.push(card)
@@ -62,50 +62,50 @@ function takeCard()
   // hand.splice(0,0,deck [Math.floor(Math.random()*deck.length)])
   // o++
   const nick = hand.map(hand => `${hand.nick}`).reverse()
-  
+
   // const nick = hand.map(hand => `${hand.nick}`)
   const name = [`./images/cards/${nick[0]}.svg`]
   const image = name
 
 
   // if it's true the card goes in the hand
-  if (card1 == 0) 
+  if (card1 == 0)
   {
     console.log(card1);
     hand.splice(0, 1, card);
     document.querySelector('.card1').src = image
-    card1 = 1    
+    card1 = 1
     console.log(card1);
-  } 
-  else if (card2 == 0) 
+  }
+  else if (card2 == 0)
   {
     hand.splice(1, 1, card);
     document.querySelector('.card2').src = image
-    card2 = 1    
-  } 
-  else if (card3 == 0) 
+    card2 = 1
+  }
+  else if (card3 == 0)
   {
     hand.splice(2, 1, card);
     document.querySelector('.card3').src = image
-    card3 = 1    
-  } 
-  else if (card4 == 0) 
+    card3 = 1
+  }
+  else if (card4 == 0)
   {
     hand.splice(3, 1, card);
     document.querySelector('.card4').src = image
-    card4 = 1    
-  } 
-  else if (card5 == 0) 
+    card4 = 1
+  }
+  else if (card5 == 0)
   {
     hand.splice(4, 1, card);
     document.querySelector('.card5').src = image
-    card5 = 1    
-  } 
-  else if (card6 == 0) 
+    card5 = 1
+  }
+  else if (card6 == 0)
   {
     hand.splice(5, 1, card);
     document.querySelector('.card6').src = image
-    card6 = 1    
+    card6 = 1
   }
 }
 
@@ -114,11 +114,11 @@ let claen = ''
 
 const moveCard = document.querySelectorAll('.myCards')
 for (card of moveCard)
-{ 
+{
   card.addEventListener('click', moveCardFunc)
 }
 let placeType = ''
-function moveCardFunc() 
+function moveCardFunc()
 {
   let getIndex = this.classList[1].substr(4)
   // console.log(hand)
@@ -130,86 +130,86 @@ function moveCardFunc()
   // this.style.transform = "translate(0px, -80px)";
   // this.src = ''
   // const groume = this.classList[1]
-  
+
   let scorePlayer2 = 0
-  
-  window.onclick = function(e) 
+
+  window.onclick = function(e)
   {
-    const newPlace = e.srcElement.className;  
+    const newPlace = e.srcElement.className;
     const lastFour = '.' + newPlace.substr(newPlace.length - 4);
     let lastFive = '.' + newPlace.substr(newPlace.length - 5);
     const firstFour = newPlace.substring(0, 4);
     const typeCard = type[parseInt(newPlace.substr(newPlace.length - 1)) - 1];
     const distanceCard = distance[parseInt(newPlace.substr(newPlace.length - 1)) - 1];
     // console.log(card1);
-    // console.log(newPlace)  
+    // console.log(newPlace)
     // console.log(typeCard);
     // console.log(scorePlayer2);
     const trash = []
-    
-    
+
+
     // console.log(lastFive);
-    if (lastFive == '.card1') 
+    if (lastFive == '.card1')
     {
       card1 = 0
       clean = '.card1'
-    } 
+    }
     else if (lastFive == '.card2'){
       card2 = 0
       clean = '.card2'
-    } 
+    }
     else if (lastFive == '.card3'){
       card3 = 0
       clean = '.card3'
-    } 
+    }
     else if (lastFive == '.card4'){
       card4 = 0
       clean = '.card4'
-    } 
+    }
     else if (lastFive == '.card5'){
       card5 = 0
       clean = '.card5'
-    } 
+    }
     else if (lastFive == '.card6'){
       card6 = 0
       clean = '.card6'
     }
 
-    if (typeCard == 'attack' || typeCard == 'defense') 
+    if (typeCard == 'attack' || typeCard == 'defense')
     {
       document.querySelectorAll('.attack').forEach(function(e) {e.style.backgroundColor='#79b8ff18'});
       document.querySelectorAll('.speed').forEach(function(e) {e.style.backgroundColor=''});
       document.querySelectorAll('.asset').forEach(function(e) {e.style.backgroundColor=''});
       document.querySelectorAll('.limite').forEach(function(e) {e.style.backgroundColor=''});
-    } 
+    }
     else if (typeCard == 'speed')
-    {      
+    {
       document.querySelectorAll('.speed').forEach(function(e) {e.style.backgroundColor='#79b8ff18'});
       document.querySelectorAll('.attack').forEach(function(e) {e.style.backgroundColor=''});
       document.querySelectorAll('.asset').forEach(function(e) {e.style.backgroundColor=''});
       document.querySelectorAll('.limite').forEach(function(e) {e.style.backgroundColor=''});
-    } 
+    }
     else if (typeCard == 'asset')
-    {      
+    {
       document.querySelectorAll('.asset').forEach(function(e) {e.style.backgroundColor='#79b8ff18'});
       document.querySelectorAll('.attack').forEach(function(e) {e.style.backgroundColor=''});
       document.querySelectorAll('.speed').forEach(function(e) {e.style.backgroundColor=''});
       document.querySelectorAll('.limite').forEach(function(e) {e.style.backgroundColor=''});
-    } 
+    }
     else if (typeCard == 'limite' || typeCard == 'limite_def')
-    {      
+    {
       document.querySelectorAll('.limite').forEach(function(e) {e.style.backgroundColor='#79b8ff18'});
       document.querySelectorAll('.attack').forEach(function(e) {e.style.backgroundColor=''});
       document.querySelectorAll('.speed').forEach(function(e) {e.style.backgroundColor=''});
       document.querySelectorAll('.asset').forEach(function(e) {e.style.backgroundColor=''});
     }
     console.log(firstFour);
-    
-    if (firstFour == 'card') 
+
+    if (firstFour == 'card')
     {
       document.querySelector(lastFour).src = moveSRC
       document.querySelector(clean).src = ''
-    } 
+    }
     else if (firstFour == 'trsh'){
       document.querySelector(clean).src = ''
     }
@@ -224,17 +224,17 @@ const  player3Attack = document.querySelector('.player3Attack')
 const  player4Attack = document.querySelector('.player4Attack')
 const clickTrash = document.querySelector('.bin')
 clickTrash.addEventListener('click', (event) => {
-  
+
 })
 // console.log(player3Attack)
 
 
 
-// Declaring variables for different pictures depending on dark mode or light mode 
+// Declaring variables for different pictures depending on dark mode or light mode
 
 const darkMode = document.querySelector('.buttonNight')
 
-// Different pictures of users and emote changing depending on the dark or light mode 
+// Different pictures of users and emote changing depending on the dark or light mode
 
 const picUser = document.querySelector('.user')
 const picBot1 = document.querySelector('.bot1')
@@ -258,7 +258,7 @@ const iconUser = chem1 + 'iconUser'
 // Counter to see if dark mode or light mode
 let count = 0
 
-darkMode.addEventListener('click', () => 
+darkMode.addEventListener('click', () =>
 {
   count++
   // If count%2 != 0 activate dark mode

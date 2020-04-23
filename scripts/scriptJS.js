@@ -246,3 +246,14 @@ darkMode.addEventListener('click', () =>
     document.documentElement.setAttribute('data-theme', 'light');
   }
 })
+
+
+const audio = document.querySelector('.audioGame')
+const playAudio = document.querySelector('.buttonMute')
+
+console.log(playAudio)
+
+playAudio.addEventListener('click', () =>
+{
+  audio.play()
+})

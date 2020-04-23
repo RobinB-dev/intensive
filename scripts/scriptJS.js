@@ -230,16 +230,17 @@ clickTrash.addEventListener('click', (event) => {
 
 
 
-////// DARKMODE
+// Declaring variables for different pictures depending on dark mode or light mode 
 
 const darkMode = document.querySelector('.buttonNight')
+
+// Different pictures of users and emote changing depending on the dark or light mode 
+
 const picUser = document.querySelector('.user')
 const picBot1 = document.querySelector('.bot1')
 const picBot2 = document.querySelector('.bot2')
 const picBot3 = document.querySelector('.bot3')
 const containerUser = document.querySelector('.containerUser')
-
-
 const chem1 = './images/icons/'
 const dark = 'Dark'
 const chem2 = '.svg'
@@ -254,10 +255,13 @@ const iconBot2 = chem1 + 'iconBot2'
 const iconBot3 = chem1 + 'iconBot3'
 const iconUser = chem1 + 'iconUser'
 
+// Counter to see if dark mode or light mode
 let count = 0
+
 darkMode.addEventListener('click', () => 
 {
   count++
+  // If count%2 != 0 activate dark mode
   if(count%2 != 0)
   {
     document.documentElement.setAttribute('data-theme', 'dark');
@@ -269,9 +273,10 @@ darkMode.addEventListener('click', () =>
     document.querySelector('.bot2').src = iconBot2 + dark + chem2
     document.querySelector('.bot3').src = iconBot3 + dark + chem2
     document.querySelector('.user').src = iconUser + dark + chem2
-    
-    
   }
+
+  // If count%2 == 0 activate light mode
+
   else
   {
     document.documentElement.setAttribute('data-theme', 'light');
@@ -286,23 +291,69 @@ darkMode.addEventListener('click', () =>
   }
 })
 
-
+// Taking the audio from the HTML
 const audio = document.querySelector('.audioGame')
+// Taking the emote of play audio
 const playAudio = document.querySelector('.buttonMute')
 
-console.log(playAudio)
-
+// Counter to see if audio is played or not
 let audioCount = 0
 
 playAudio.addEventListener('click', () =>
 {  
   audioCount++
+  // If audioCount%2 != 0 play audio
   if(audioCount%2 != 0)
   {
     audio.play()
   }
+  // If audioCount%2 == 0 pause audio
   else
   {
     audio.pause()
+  }
+})
+
+// Event to see if the audio and played and dark mode to change the emote to a Volume played Emote
+playAudio.addEventListener('click', () =>
+{
+  // Different conditions to put the image in the right place depending of the dark mode and if audio is played or not.
+  if (audioCount%2 != 0 && count%2!=0)
+  {
+    document.querySelector('.iconMute').src = iconVolume + dark + chem2
+  }
+  else if(audioCount%2 !=0 && count%2==0)
+  {
+    document.querySelector('.iconMute').src = iconVolume + chem2
+  }
+  else if(audioCount%2 ==0 && count%2!=0)
+  {
+    document.querySelector('.iconMute').src = iconMute + dark + chem2
+  }
+  else if(audioCount%2 ==0 && count%2==0)
+  {
+    document.querySelector('.iconMute').src = iconMute + chem2
+  }
+})
+
+// Event to see if the audio and played and dark mode to change the emote to a Volume played Emote
+darkMode.addEventListener('click', () =>
+{
+  // Different conditions to put the image in the right place depending of the dark mode and if audio is played or not.
+  if (audioCount%2 != 0 && count%2!=0)
+  {
+    document.querySelector('.iconMute').src = iconVolume + dark + chem2
+  }
+  else if(audioCount%2 !=0 && count%2==0)
+  {
+    document.querySelector('.iconMute').src = iconVolume + chem2
+  }
+  else if(audioCount%2 ==0 && count%2!=0)
+  {
+    document.querySelector('.iconMute').src = iconMute + dark + chem2
+  }
+  else if(audioCount%2 ==0 && count%2==0)
+  {
+    document.querySelector('.iconMute').src = iconMute + chem2
   }
 })

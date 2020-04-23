@@ -253,7 +253,17 @@ const playAudio = document.querySelector('.buttonMute')
 
 console.log(playAudio)
 
+let audioCount = 0
+
 playAudio.addEventListener('click', () =>
-{
-  audio.play()
+{  
+  audioCount++
+  if(audioCount%2 != 0)
+  {
+    audio.play()
+  }
+  else
+  {
+    audio.pause()
+  }
 })

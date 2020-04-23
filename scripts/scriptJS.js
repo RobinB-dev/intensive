@@ -1,4 +1,3 @@
-
 var img = document.querySelectorAll("img");
 img.onerror = function () { 
     this.style.display = "none";
@@ -221,3 +220,16 @@ clickTrash.addEventListener('click', (event) => {
   
 })
 // console.log(player3Attack)
+
+
+
+////// DARKMODE
+
+const darkMode = document.querySelector('.buttonNight')
+console.log(button)
+
+darkMode.addEventListener('click', () => 
+{
+  document.documentElement.setAttribute('data-theme', 'dark');
+
+})

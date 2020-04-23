@@ -8,8 +8,18 @@
     --cream: #FBFAFE;
     --white: #ffffff;
     --black: #272727;
+    --boxshadow: #ebebeb;
+
 }
 
+[data-theme="dark"] {
+    --pinkPastel : #9A97F3;
+    --blue: #818cab;
+    --bluePastel: #e1e1ff;
+    --cream: #161625;
+    --black: #818cab;
+    --white: #FFFFFF;
+}
 body{
     background-image: url("../images/background.svg");
     background-color: var(--cream);
@@ -68,8 +78,8 @@ body{
     align-items: center;
     justify-content: center;
     border-radius: 20px;
-    box-shadow:  15px 15px 30px #c9d0d8, 
-    -15px -15px 30px #ffffff;
+    box-shadow:  15px 15px 30px var(--boxshadow), 
+    -15px -15px 30px var(--boxshadow);
     cursor: pointer;
 }
 
@@ -140,8 +150,8 @@ h2{
     /* grid-gap:5px; */
     border-radius: 6px;
     background:var(--pinkPastel);
-    box-shadow: inset 5px 5px 5px #efedf6,
-    inset -5px -5px 5px #efedf6;
+    box-shadow: inset 5px 5px 5px var(--boxshadow),
+    inset -5px -5px 5px var(--boxshadow);
 
 }
 
@@ -156,8 +166,8 @@ h2{
     background: var(--bluePastel);
     border-radius: 100px;
     border: 5px solid var(--white);
-    box-shadow:  5px 5px 10px #ebebeb, 
-             -5px -5px 10px #ebebeb;
+    box-shadow:  5px 5px 10px var(--boxshadow), 
+             -5px -5px 10px var(--boxshadow);
     display: grid;
     grid-template-columns: 3fr 4fr 3fr;
 }
@@ -216,10 +226,10 @@ h2{
     /* cursor: pointer; */
 }
 .hold{
-    border: solid #cccccc 4px;
+    border: solid var(--white) 4px;
 }
 .hovered{
-    background: #ffffff;
+    background: var(--white);
     border-style: dashed;
 }
 .invisible{
@@ -241,7 +251,7 @@ h2{
     justify-content: center;
 }
 
-.button{
+.emoteButton{
     width: 65px;
     height: 65px;
     background: var(--bluePastel);
@@ -279,7 +289,7 @@ FOOTER GRID
     background: var(--pinkPastel);
     box-shadow: 0 0 0px var(--black);
     text-align: center;
-    box-shadow:  0px -5px 10px #ebebeb;
+    box-shadow:  0px -5px 10px var(--boxshadow);
     position: relative;
 }
 

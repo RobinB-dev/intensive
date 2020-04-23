@@ -233,8 +233,16 @@ clickTrash.addEventListener('click', (event) => {
 ////// DARKMODE
 
 const darkMode = document.querySelector('.buttonNight')
-
+let count = 0
 darkMode.addEventListener('click', () => 
 {
-  document.documentElement.setAttribute('data-theme', 'dark');
+  count++
+  if(count%2 != 0)
+  {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+  else
+  {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
 })

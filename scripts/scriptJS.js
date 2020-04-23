@@ -246,3 +246,24 @@ darkMode.addEventListener('click', () =>
     document.documentElement.setAttribute('data-theme', 'light');
   }
 })
+
+
+const audio = document.querySelector('.audioGame')
+const playAudio = document.querySelector('.buttonMute')
+
+console.log(playAudio)
+
+let audioCount = 0
+
+playAudio.addEventListener('click', () =>
+{  
+  audioCount++
+  if(audioCount%2 != 0)
+  {
+    audio.play()
+  }
+  else
+  {
+    audio.pause()
+  }
+})

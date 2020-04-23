@@ -88,6 +88,7 @@ h1{
     font-size: 20px;
     color: var(--blue) ;
     font-weight: 400;
+    justify-self: center;
 }
 
 h2{
@@ -162,12 +163,13 @@ h2{
 }
 
 .deck{
-    background: var(--white);
+    display: grid;
+    grid-template-rows: 23px 120px;
     width: 85px;
     height: 120px;
     border-radius: 5px;
-    text-transform: uppercase;
-    display: flex;
+    padding-bottom: 20px;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     align-self: center;

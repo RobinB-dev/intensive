@@ -306,3 +306,15 @@ playAudio.addEventListener('click', () =>
     audio.pause()
   }
 })
+const buttonCards = document.querySelector('.buttonCards')
+buttonCards.addEventListener('click', () => 
+{
+  const assetDisplay = document.querySelector('.assetDisplay')
+  assetDisplay.style.display = "block"
+
+  const boutonAsset = document.querySelector('.boutonAsset')
+boutonAsset.addEventListener('click', () => 
+{
+  assetDisplay.style.display = "none"
+})
+})

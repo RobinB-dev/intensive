@@ -2,162 +2,194 @@ let deck = [
   {
     nick: 'card_coffee',
     id: '1',
-    type: 'defense'
+    type: 'defense',
+    distance :'0',
   },
   {
     nick: 'card_coffee',
     id: '2',
-    type: 'defense'
+    type: 'defense',
+    distance :'0',
   },
   {
     nick: 'card_coffee',
     id: '3',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },
   {
     nick: 'card_coffee',
     id: '4',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },
   {
     nick: 'card_coffee',
     id: '5',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },
   {
     nick: 'card_coffee',
     id: '6',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },
   {
     nick: 'card_meeting',
     id: '7',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },  
   {
     nick: 'card_meeting',
     id: '8',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },  
   {
     nick: 'card_meeting',
     id: '9',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },  
   {
     nick: 'card_meeting',
     id: '10',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },  
   {
     nick: 'card_meeting',
     id: '11',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },  
   {
     nick: 'card_meeting',
     id: '12',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },  
   {
     nick: 'card_meeting',
     id: '13',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },  
   {
     nick: 'card_meeting',
     id: '14',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },  
   {
     nick: 'card_meeting',
     id: '15',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },  
   {
     nick: 'card_meeting',
     id: '16',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },  
   {
     nick: 'card_meeting',
     id: '17',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },  
   {
     nick: 'card_meeting',
     id: '18',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },  
   {
     nick: 'card_meeting',
     id: '19',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },
   {
     nick: 'card_meeting',
     id: '20',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },
   {
     nick: 'card_pinterest',
     id: '21',
-    type: 'limite_def'
+    type: 'limite_def',
+    distance :'0',
   }, 
   {
     nick: 'card_pinterest',
     id: '22',
-    type: 'limite_def'
+    type: 'limite_def',
+    distance : '0',
   }, 
   {
     nick: 'card_pinterest',
     id: '23',
-    type: 'limite_def'
+    type: 'limite_def',
+    distance : '0',
   }, 
   {
     nick: 'card_pinterest',
     id: '24',
-    type: 'limite_def'
+    type: 'limite_def',
+    distance : '0',
   }, 
   {
     nick: 'card_pinterest',
     id: '25',
-    type: 'limite_def'
+    type: 'limite_def',
+    distance : '0',
   },
   {
     nick: 'card_pinterest',
     id: '26',
-    type: 'limite_def'
+    type: 'limite_def',
+    distance : '0',
   }, 
   {
     nick: 'card_restart',
     id: '27',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },
   {
     nick: 'card_restart',
     id: '28',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },
   {
     nick: 'card_restart',
     id: '29',
-    type: 'defense'
+    type: 'defense',
+    distance :'0',
   },
   {
     nick: 'card_restart',
     id: '30',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },
   {
     nick: 'card_restart',
     id: '31',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },
   {
     nick: 'card_restart',
     id: '32',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },
   {
     nick: 'card_healing',
@@ -167,366 +199,439 @@ let deck = [
   {
     nick: 'card_healing',
     id: '34',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },
   {
     nick: 'card_healing',
     id: '35',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },
   {
     nick: 'card_healing',
     id: '36',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },
   {
     nick: 'card_healing',
     id: '37',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },
   {
     nick: 'card_healing',
     id: '38',
-    type: 'defense'
+    type: 'defense',
+    distance : '0',
   },
   {
     nick: 'card_photoshop',
     id: '39',
-    type: 'attack'
+    type: 'attack',
+    distance : '0',
   },
   {
     nick: 'card_photoshop',
     id: '40',
-    type: 'attack'
+    type: 'attack',
+    distance : '0',
   },
   {
     nick: 'card_photoshop',
     id: '41',
-    type: 'attack'
+    type: 'attack',
+    distance : '0',
   }, 
   {
     nick: 'card_client',
     id: '42',
-    type: 'attack'
+    type: 'attack',
+    distance : '0',
   },
   {
     nick: 'card_client',
     id: '43',
-    type: 'attack'
+    type: 'attack',
+    distance : '0',
   }, 
   {
     nick: 'card_client',
     id: '44',
-    type: 'attack'
+    type: 'attack',
+    distance : '0',
   }, 
   {
     nick: 'card_client',
     id: '45',
-    type: 'attack'
+    type: 'attack',
+    distance : '0',
   },
   {
     nick: 'card_client',
     id: '46',
-    type: 'attack'
+    type: 'attack',
+    distance : '0',
   }, 
   {
     nick: 'card_insominia',
     id: '47',
-    type: 'attack'
+    type: 'attack',
+    distance : '0',
   }, 
   {
     nick: 'card_insominia',
     id: '48',
-    type: 'attack'
+    type: 'attack',
+    distance : '0',
   }, 
   {
     nick: 'card_insominia',
     id: '49',
-    type: 'attack'
+    type: 'attack',
+    distance : '0',
   }, 
   {
     nick: 'card_medical_leave',
     id: '50',
-    type: 'attack'
+    type: 'attack',
+    distance : '0',
   }, 
   {
     nick: 'card_medical_leave',
     id: '51',
-    type: 'attack'
+    type: 'attack',
+    distance : '0',
   }, 
   {
     nick: 'card_medical_leave',
     id: '52',
-    type: 'attack'
+    type: 'attack',
+    distance : '0',
   },
   {
     nick: 'card_clueless',
     id: '53',
-    type: 'limite'
+    type: 'limite',
+    distance : '0',
   },
   {
     nick: 'card_clueless',
     id: '54',
-    type: 'limite'
+    type: 'limite',
+    distance : '0',
   },
   {
     nick: 'card_clueless',
     id: '55',
-    type: 'limite'
+    type: 'limite',
+    distance : '0',
   },
   {
     nick: 'card_clueless',
     id: '56',
-    type: 'limite'
+    type: 'limite',
+    distance : '0',
   },
   {
     nick: 'card_speed_25',
     id: '57',
-    type: 'speed'
+    type: 'speed',
+    distance : '25',
   },
   {
     nick: 'card_speed_25',
     id: '58',
-    type: 'speed'
+    type: 'speed',
+    distance : '25',
   },
   {
     nick: 'card_speed_25',
     id: '59',
-    type: 'speed'
+    type: 'speed',
+    distance : '25',
   },
   {
     nick: 'card_speed_25',
     id: '60',
-    type: 'speed'
+    type: 'speed',
+    distance : '25',
   },
   {
     nick: 'card_speed_25',
     id: '61',
-    type: 'speed'
+    type: 'speed',
+    distance : '25',
   },
   {
     nick: 'card_speed_25',
     id: '62',
-    type: 'speed'
+    type: 'speed',
+    distance : '25',
   },
   {
     nick: 'card_speed_25',
     id: '63',
-    type: 'speed'
+    type: 'speed',
+    distance : '25',
   },
   {
     nick: 'card_speed_25',
     id: '64',
-    type: 'speed'
+    type: 'speed',
+    distance : '25',
   },
   {
     nick: 'card_speed_25',
     id: '65',
-    type: 'speed'
+    type: 'speed',
+    distance : '25',
   },
   {
     nick: 'card_speed_25',
     id: '66',
-    type: 'speed'
+    type: 'speed',
+    distance : '25',
   },
   {
     nick: 'card_speed_50',
     id: '67',
-    type: 'speed'
+    type: 'speed',
+    distance : '50',
   },
   {
     nick: 'card_speed_50',
     id: '68',
-    type: 'speed'
+    type: 'speed',
+    distance : '50',
   },
   {
     nick: 'card_speed_50',
     id: '69',
-    type: 'speed'
+    type: 'speed',
+    distance : '50',
   },
   {
     nick: 'card_speed_50',
     id: '70',
-    type: 'speed'
+    type: 'speed',
+    distance : '50',
   },
   {
     nick: 'card_speed_50',
     id: '71',
-    type: 'speed'
+    type: 'speed',
+    distance : '50',
   },
   {
     nick: 'card_speed_50',
     id: '72',
-    type: 'speed'
+    type: 'speed',
+    distance : '50',
   },
   {
     nick: 'card_speed_50',
     id: '73',
-    type: 'speed'
+    type: 'speed',
+    distance : '50',
   },
   {
     nick: 'card_speed_50',
     id: '74',
-    type: 'speed'
+    type: 'speed',
+    distance : '50',
   },
   {
     nick: 'card_speed_50',
     id: '75',
-    type: 'speed'
+    type: 'speed',
+    distance : '50',
   },
   {
     nick: 'card_speed_50',
     id: '76',
-    type: 'speed'
+    type: 'speed',
+    distance : '50',
   },
   {
     nick: 'card_speed_75',
     id: '77',
-    type: 'speed'
+    type: 'speed',
+    distance : '50',
   },
   {
     nick: 'card_speed_75',
     id: '78',
-    type: 'speed'
+    type: 'speed',
+    distance : '75',
   },
   {
     nick: 'card_speed_75',
     id: '79',
-    type: 'speed'
+    type: 'speed',
+    distance : '75',
   },
   {
     nick: 'card_speed_75',
     id: '80',
-    type: 'speed'
+    type: 'speed',
+    distance : '75',
   },
   {
     nick: 'card_speed_75',
     id: '81',
-    type: 'speed'
+    type: 'speed',
+    distance : '75',
   },
   {
     nick: 'card_speed_75',
     id: '82',
-    type: 'speed'
+    type: 'speed',
+    distance : '75',
   },
   {
     nick: 'card_speed_75',
     id: '83',
-    type: 'speed'
+    type: 'speed',
+    distance : '75',
   },
   {
     nick: 'card_speed_75',
     id: '84',
-    type: 'speed'
+    type: 'speed',
+    distance : '75',
   },
   {
     nick: 'card_speed_75',
     id: '85',
-    type: 'speed'
+    type: 'speed',
+    distance : '75',
   },
   {
     nick: 'card_speed_75',
     id: '86',
-    type: 'speed'
+    type: 'speed',
+    distance : '75',
   },
   {
     nick: 'card_speed_100',
     id: '87',
-    type: 'speed'
+    type: 'speed',
+    distance : '75',
   },
   {
     nick: 'card_speed_100',
     id: '88',
-    type: 'speed'
+    type: 'speed',
+    distance : '75',
   },
   {
     nick: 'card_speed_100',
     id: '89',
-    type: 'speed'
+    type: 'speed',
+    distance : '75',
   },
   {
     nick: 'card_speed_100',
     id: '90',
-    type: 'speed'
+    type: 'speed',
+    distance : '75',
   },
   {
     nick: 'card_speed_100',
     id: '91',
-    type: 'speed'
+    type: 'speed',
+    distance : '100',
   },
   {
     nick: 'card_speed_100',
     id: '92',
-    type: 'speed'
+    type: 'speed',
+    distance : '100',
   },
   {
     nick: 'card_speed_100',
     id: '93',
-    type: 'speed'
+    type: 'speed',
+    distance : '100',
   },
   {
     nick: 'card_speed_100',
     id: '94',
-    type: 'speed'
+    type: 'speed',
+    distance : '100',
   },
   {
     nick: 'card_speed_100',
     id: '95',
-    type: 'speed'
+    type: 'speed',
+    distance : '100',
   },
   {
     nick: 'card_speed_100',
     id: '96',
-    type: 'speed'
+    type: 'speed',
+    distance : '100',
   },
   {
     nick: 'card_speed_100',
     id: '97',
-    type: 'speed'
+    type: 'speed',
+    distance : '100',
   },
   {
     nick: 'card_speed_100',
     id: '98',
-    type: 'speed'
+    type: 'speed',
+    distance : '100',
   },
   {
    nick: 'card_iron_constitution',
     id: '99',
-    type: 'asset'
+    type: 'asset',
+    distance : '0',
   },
   {
     nick: 'card_computer_science',
     id: '100',
-    type: 'asset'
+    type: 'asset',
+    distance : '0',
   },
   {
     nick: 'card_speed_200',
     id: '101',
     type: 'speed',
+    distance : '200',
   },
   {
     nick: 'card_speed_200',
     id: '102',
     type: 'speed',
+    distance : '200',
   },
   {
     nick: 'card_speed_200',
     id: '103',
     type: 'speed',
+    distance : '200',
   },
   {
     nick: 'card_speed_200',
     id: '104',
     type: 'speed',
+    distance : '200',
   },
   {
     nick: 'card_sleeping_pill',
     id: '105',
-    type: 'asset'
+    type: 'asset',
+    distance : '0',
   },
   {
     nick: 'card_colaborator',
     id: '106',
-    type: 'asset'
+    type: 'asset',
+    distance : '0',
   }
   ]

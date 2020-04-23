@@ -123,14 +123,18 @@ function moveCardFunc() {
   let scorePlayer2 = 0
   
   window.onclick = function(e) {
-    const newPlace = e.srcElement.className;    
+    const newPlace = e.srcElement.className;  
+    console.log(newPlace)  
     const lastFour = '.' + newPlace.substr(newPlace.length - 4);
     const firstFour = newPlace.substring(0, 4);
+    console.log(lastFour)
     const typeCard = type[parseInt(newPlace.substr(newPlace.length - 1)) - 1];
     const distanceCard = distance[parseInt(newPlace.substr(newPlace.length - 1)) - 1];
     // console.log(distanceCard);
     // console.log(typeCard);
     // console.log(scorePlayer2);
+    const trash = []
+    
     
     if (typeCard == 'attack' || typeCard == 'defense') {
       document.querySelectorAll('.attack').forEach(function(e) {e.style.backgroundColor='#79b8ff18'});
@@ -212,5 +216,8 @@ function place4 (){
 const  player1Attack = document.querySelector('.player1Attack')
 const  player3Attack = document.querySelector('.player3Attack')
 const  player4Attack = document.querySelector('.player4Attack')
-
+const clickTrash = document.querySelector('.bin')
+clickTrash.addEventListener('click', (event) => {
+  
+})
 // console.log(player3Attack)

@@ -336,17 +336,18 @@ darkMode.addEventListener('click', () =>
 })
 
 
-// OVERLAY RULES
+// Overlay Rules
 
 const rulesDisplay = document.querySelector('.overlayRules')
-  
+
+// Taking the button rules to make appear the rules
 const buttonRules = document.querySelector('.buttonRules')
 buttonRules.addEventListener('click', () => 
 {
   rulesDisplay.style.display = 'block'
 })
-
-const quitButton = document.querySelectorAll('.quitButton')
+// Taking the quit button to make the rules disapear
+const quitButton = document.querySelector('.quitButton')
 quitButton.addEventListener('click', () => 
 {
   rulesDisplay.style.display = 'none'

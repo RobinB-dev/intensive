@@ -335,7 +335,6 @@ darkMode.addEventListener('click', () =>
   }
 })
 
-
 // Overlay Rules
 
 const rulesDisplay = document.querySelector('.overlayRules')
@@ -348,8 +347,10 @@ buttonRules.addEventListener('click', () =>
 })
 // Taking the quit button to make the rules disapear
 const quitButton = document.querySelector('.quitButton')
+console.log(quitButton)
 quitButton.addEventListener('click', () => 
 {
+  console.log(quitButton)
   rulesDisplay.style.display = 'none'
 })
 
@@ -363,8 +364,8 @@ buttonCards.addEventListener('click', () =>
   const overlayCards = document.querySelector('.overlayCards')
   overlayCards.style.display = "block"
 
-  const boutonAsset = document.querySelector('.quitButton')
-boutonAsset.addEventListener('click', () => 
+  const boutonAsset = document.querySelector('.quitButtonCards')
+  boutonAsset.addEventListener('click', () => 
 {
   overlayCards.style.display = "none"
 })

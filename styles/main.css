@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
 
-:root
-{
+:root{
     --pinkPastel: #f6f4feaf;
     --blue: #79B7FF;
     --bluePastel: #EDF5FE;
@@ -16,8 +15,7 @@
 
 }
 
-[data-theme="dark"] 
-{
+[data-theme="dark"]{
     --pinkPastel : #2c2c2ca1;
     --blue: #EDF5FE;
     --bluePastel: #4E58AB;
@@ -198,8 +196,7 @@ h2{
     color: var(--h2Color) ;
     font-weight: 400;
 }
-.containerGame
-{
+.containerGame{
     display: grid;
     grid-template-columns: 1fr 200px 30px repeat(3, 200px) 30px 200px 1fr;
     grid-template-rows: repeat(3, 180px) 1fr;
@@ -311,21 +308,26 @@ h2{
     height: 136px;
     border-radius: 5px;
 }
+
 .slot2{ 
     height: 136px;
     border-radius: 5px;
     /* cursor: pointer; */
 }
+
 .hold{
     border: solid var(--white) 4px;
 }
+
 .hovered{
     background: var(--white);
     border-style: dashed;
 }
+
 .invisible{
     display: none;
 }
+
 .overlay {
     position: absolute;
     font-size: 50px;

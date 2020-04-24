@@ -348,16 +348,17 @@ boutonAsset.addEventListener('click', () =>
 })
 })
 
-// OVERLAY RULES
+// Overlay Rules
 
 const rulesDisplay = document.querySelector('.overlayRules')
-  
+
+// Taking the button rules to make appear the rules
 const buttonRules = document.querySelector('.buttonRules')
 buttonRules.addEventListener('click', () => 
 {
   rulesDisplay.style.display = 'block'
 })
-
+// Taking the quit button to make the rules disapear
 const quitButton = document.querySelector('.quitButton')
 quitButton.addEventListener('click', () => 
 {

@@ -350,6 +350,7 @@ const buttonRules = document.querySelector('.buttonRules')
 buttonRules.addEventListener('click', () => 
 {
   rulesDisplay.style.display = 'block'
+  overlayCards.style.display = 'none'
 })
 // Taking the quit button to make the rules disapear
 const quitButton = document.querySelector('.quitButton')
@@ -361,15 +362,16 @@ quitButton.addEventListener('click', () =>
 // OVERLAY CARDS
 
 const buttonCards = document.querySelector('.buttonCards')
+const overlayCards = document.querySelector('.overlayCards')
 
 buttonCards.addEventListener('click', () => 
 {
-  const overlayCards = document.querySelector('.overlayCards')
   overlayCards.style.display = 'block'
+  rulesDisplay.style.display = 'none'
+})
 
-  const boutonAsset = document.querySelector('.quitButtonCards')
-  boutonAsset.addEventListener('click', () => 
+const boutonAsset = document.querySelector('.quitButtonCards')
+boutonAsset.addEventListener('click', () => 
 {
   overlayCards.style.display = 'none'
-})
 })

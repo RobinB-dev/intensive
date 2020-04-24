@@ -115,6 +115,9 @@ for (card of moveCard)
   card.addEventListener('click', moveCardFunc)
 }
 
+let distanceCard = 0
+let memDistance = 0
+let memWin =0
 
 function moveCardFunc()
 {
@@ -136,31 +139,49 @@ function moveCardFunc()
     const firstFour = newPlace.substring(0, 4);
     // get the type of the card that that we select 
     const typeCard = type[parseInt(newPlace.substr(newPlace.length - 1)) - 1];
-    // get the distance value of the card that that we select (not working yet)
-    const distanceCard = distance[parseInt(newPlace.substr(newPlace.length - 1)) - 1];
+    
+    // insert the distance sum of your cards speed in HTML
+    if (distanceCard != 0 && firstFour == 'card')
+    {
+      memDistance = memDistance + parseInt(distanceCard)
+      const win = document.querySelector('.myDistanceY')
+      win.textContent = memDistance
+      if (memDistance >= 100 && memWin == 0)
+      {
+        overlayWin.style.display = 'block'
+        memWin = 1
+      }
+    }
+    distanceCard = distance[parseInt(newPlace.substr(newPlace.length - 1)) - 1];
+    
     // frees the space of the card that has been selected by assigning it the value 0
     if (lastFive == '.card1')
     {
       card1 = 0
       clean = '.card1'
     }
-    else if (lastFive == '.card2'){
+    else if (lastFive == '.card2')
+    {
       card2 = 0
       clean = '.card2'
     }
-    else if (lastFive == '.card3'){
+    else if (lastFive == '.card3')
+    {
       card3 = 0
       clean = '.card3'
     }
-    else if (lastFive == '.card4'){
+    else if (lastFive == '.card4')
+    {
       card4 = 0
       clean = '.card4'
     }
-    else if (lastFive == '.card5'){
+    else if (lastFive == '.card5')
+    {
       card5 = 0
       clean = '.card5'
     }
-    else if (lastFive == '.card6'){
+    else if (lastFive == '.card6')
+    {
       card6 = 0
       clean = '.card6'
     }
@@ -202,7 +223,8 @@ function moveCardFunc()
       document.querySelector(clean).src = ''
     }
     // if we click on the bin 
-    else if (firstFour == 'trsh'){
+    else if (firstFour == 'trsh')
+    {
       document.querySelector(clean).src = ''
     }
   }
@@ -374,4 +396,15 @@ const boutonAsset = document.querySelector('.quitButtonCards')
 boutonAsset.addEventListener('click', () => 
 {
   overlayCards.style.display = 'none'
+})
+
+
+// OVERLAY WIN
+
+
+const overlayWin = document.querySelector('.overlayWin')
+const boutonWin = document.querySelector('.continueButton')
+boutonWin.addEventListener('click', () => 
+{
+  overlayWin.style.display = 'none'
 })

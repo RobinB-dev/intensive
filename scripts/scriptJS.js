@@ -7,20 +7,20 @@ const overlay = document.querySelector('.overlayName')
 
 // Put the player name in the right place and remove the overlay when click on confirm
 
-// confirmButton.addEventListener('click', () =>
-// {
-//    console.log(pseudoInput.value)
-//    playerName.textContent = `${pseudoInput.value} (you)`
+confirmButton.addEventListener('click', () =>
+{
+   console.log(pseudoInput.value)
+   playerName.textContent = `${pseudoInput.value} (you)`
 
-//    // The player can't confirm if he doesn't enter a value
+   // The player can't confirm if he doesn't enter a value
 
-//   if(pseudoInput.value != 0)
-//   {
-//     overlay.style.display = 'none'
-//   }
-// })
+  if(pseudoInput.value != 0)
+  {
+    overlay.style.display = 'none'
+  }
+})
 
-//Table with 106 cards, attribut : nick, id, type
+// Table with 106 cards, attribut : nick, id, type
 
 
 function shuffle(a)
@@ -346,4 +346,20 @@ boutonAsset.addEventListener('click', () =>
 {
   assetDisplay.style.display = "none"
 })
+})
+
+// OVERLAY RULES
+
+const rulesDisplay = document.querySelector('.overlayRules')
+  
+const buttonRules = document.querySelector('.buttonRules')
+buttonRules.addEventListener('click', () => 
+{
+  rulesDisplay.style.display = 'block'
+})
+
+const quitButton = document.querySelector('.quitButton')
+quitButton.addEventListener('click', () => 
+{
+  rulesDisplay.style.display = 'none'
 })

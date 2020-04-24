@@ -1,37 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
 
 :root{
-    --pinkPastel: #f6f4feaf;
-    --blue: #79B7FF;
-    --bluePastel: #EDF5FE;
-    --cream: #FBFAFE;
+    --primaryColor: #FBFAFE;
+    --secondaryColor: #79B7FF;
+    --accent1: #f6f4feaf;
+    --accent2: #EDF5FE;
     --white: #ffffff;
-    --black: #272727;
+    --textColor: #272727;
+    --textColor2: #79B7FF;
     --boxshadow: #ebebeb;
     --buttonColor: #EDF5FE;
-    --h2Color: #79B7FF;
     --borderWhite: #FFFFFF;
-    --myCards: #F6F4FE
-
+    --myCards: #f6f4feaf;
 }
 
 [data-theme="dark"]{
-    --pinkPastel : #2c2c2ca1;
-    --blue: #EDF5FE;
-    --bluePastel: #4E58AB;
-    --cream: #141D26;
-    --black: #272727;
+    --primaryColor: #141D26;
+    --secondaryColor: #EDF5FE;
+    --accent1 : #2c2c2ca1;
+    --accent2: #4E58AB;
     --white: #FFFFFF;
+    --textColor: #d3d3d3;
+    --textColor2: #a8b1ff;
     --boxshadow: #2c2c2c;
     --buttonColor: #4E58AB;
-    --h2Color: #a8b1ff;
     --borderWhite: #0C1B30;
-    --myCards: #061237;
+    --myCards: #06123767;
 }
 
 body{
     background-image: url("../images/background.svg");
-    background-color: var(--cream);
+    background-color: var(--primaryColor);
     font-family: 'Comfortaa', cursive;
     user-select: none;
 }
@@ -42,8 +41,14 @@ body{
     OVERLAY
 *************/
 
-/* OVERLAY NAME */
+.overlayDesign{
+    background: var(--primaryColor);
+    border-radius: 30px;
+    border: 5px solid var(--accent2);
+    padding: 20px;
+}
 
+/* OVERLAY NAME */
 .overlayName{
     display: flex;
     text-align: center;
@@ -51,8 +56,7 @@ body{
     align-items: center;
     width: 960px;
     position: absolute;
-    color: var(--blue);
-    background: var(--white);
+    color: var(--secondaryColor);
     z-index: 11;
     padding-top: 10px;
     margin-top: 120px;
@@ -71,16 +75,17 @@ body{
 }
 
 .pseudoInput{
-  width: 140px;
-  height: 50px;
+  width: 150px;
+  height: 40px;
   margin: 20px 0;
   padding: 0 5px;
-  border-radius: 6px;
-  border: 2px solid var(--bluePastel);
+  border-radius: 10px;
+  border: 2px solid var(--accent2);
+  background-color: var(--borderWhite);
   text-align: center;
   font-style: 20px;
   font-weight: 300;
-  color: var(--black);
+  color: var(--textColor);
   outline: none;
 }
 
@@ -92,30 +97,32 @@ body{
     line-height: 40px;
     margin-bottom: 10px;
     margin-top: 20px;
-    background: var(--bluePastel);
-    border-radius: 20px;
-    box-shadow:  15px 15px 50px var(--boxshadow), 
-    -15px -15px 50px var(--boxshadow);
     cursor: pointer;
-    color: var(--blue);
+    color: var(--secondaryColor);
     margin-left: auto;
     margin-right: auto;
+    background: var(--accent2);
+    border-radius: 100px;
+    border: 5px solid var(--borderWhite);
+    box-shadow:  5px 5px 10px var(--boxshadow), 
+             -5px -5px 10px var(--boxshadow);
+    transition: all 0.3s ease;
 }
 
 .confirmButton:hover, .quitButton:hover{
-    -webkit-transform: scale(1.1);
+    cursor: pointer;
+    -webkit-transform: scale(1.05);
+    transition: all 0.3s ease;
 }
 
 /* OVERLAY RULES */
 
 .overlayRules{
     width: 960px;
-    height: 700px;
+    height: 650px;
     position: absolute;
-    background: var(--white);
     z-index: 11;
-    padding: 20px;
-    margin-top: 20px;
+    margin: 20px 20px;
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -127,34 +134,34 @@ body{
 
 .overlayRules h1{
     margin-bottom: 10px;
-    color: var(--blue);
+    color: var(--secondaryColor);
     font-weight: 700;
     font-size: 25px;
     text-align: center;
 }
 
 .overlayRules h2{
-    margin-top: 10px;
-    color: var(--blue);
+    /* margin-top: 5px; */
+    color: var(--secondaryColor);
     font-weight: 700;
     font-size: 17px;
 }
 
 .overlayRules span{
     margin-top: 10px;
-    color: var(--black);
+    color: var(--textColor);
     font-weight: 300;
     font-size: 15px;
 }
 
 .rules1{
     margin: 10px 0px;
-    background: var(--pinkPastel);
+    background: var(--accent1);
 }
 
 .rules2{
     /* margin: 10px 0px; */
-    background: var(--bluePastel);
+    background: var(--accent2);
 }
 
 /* OVERLAY CARDS */
@@ -163,14 +170,14 @@ body{
     display: flex;
     text-align: center;
     width: 960px;
+    height: 650px;
     position: absolute;
-    color: var(--blue);
-    background: var(--white);
+    color: var(--secondaryColor);
     z-index: 11;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
     left: 0;
     right: 0;
     display: none;
@@ -185,10 +192,6 @@ body{
 
 }
 
-.overlayCards h1{
-    grid-column: 1 / -1;
-}
-
 .largeArrow{
     grid-column: 1 / 3;
 }
@@ -198,8 +201,10 @@ body{
 }
 
 .overlayCards h1{
-    margin: 50px;
-    color: var(--blue);
+    grid-column: 1 / -1;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: var(--secondaryColor);
     font-weight: 700;
     font-size: 25px;
     text-align: center;
@@ -217,6 +222,9 @@ body{
     transition: all 0.5s ease;
 }
 
+.quitButtonCards{
+    margin-top: 50.5px;
+}
 
 /*************
 
@@ -227,7 +235,7 @@ MIDDLE GRID
 h1{
     margin: 0;
     font-size: 20px;
-    color: var(--blue) ;
+    color: var(--secondaryColor) ;
     font-weight: 400;
     justify-self: center;
 }
@@ -235,7 +243,7 @@ h1{
 h2{
     margin: 0;
     font-size: 15px;
-    color: var(--h2Color) ;
+    color: var(--textColor2) ;
     font-weight: 400;
 }
 .containerGame{
@@ -279,7 +287,7 @@ h2{
     grid-template-columns: repeat(2, 100px);
     /* grid-gap:5px; */
     border-radius: 6px;
-    background:var(--pinkPastel);
+    background:var(--accent1);
     box-shadow: inset 5px 5px 5px var(--boxshadow),
     inset -5px -5px 5px var(--boxshadow);
 
@@ -293,7 +301,7 @@ h2{
 .table{
     margin-top: 13px;
     grid-column: 4 / 7;
-    background: var(--bluePastel);
+    background: var(--accent2);
     border-radius: 100px;
     border: 5px solid var(--borderWhite);
     box-shadow:  5px 5px 10px var(--boxshadow), 
@@ -315,7 +323,7 @@ h2{
     align-self: center;
     justify-self: center;
     font-weight: 400;
-    color: var(--blue);
+    color: var(--secondaryColor);
 }
 
 .logo{
@@ -374,7 +382,7 @@ h2{
     position: absolute;
     font-size: 50px;
     padding-top: 45px;
-    color: var(--h2Color);
+    color: var(--textColor2);
     font-weight: 700;
     justify-content: center;
     justify-self: center;
@@ -397,11 +405,13 @@ h2{
     box-shadow:  5px 5px 10px var(--boxshadow), 
     -5px -5px 10px var(--boxshadow);
     border-radius: 100px;
+    transition: all 0.3s ease;
 }
 
 .button:hover{
     cursor: pointer;
-    -webkit-transform: scale(1.1);
+    -webkit-transform: scale(1.05);
+    transition: all 0.3s ease;
 }
 .emote{
     width: 80%;
@@ -425,7 +435,7 @@ FOOTER GRID
     grid-column: 1 / -1;
     margin-top: 10px;
     background: var(--myCards);
-    box-shadow: 0 0 0px var(--black);
+    box-shadow: 0 0 0px var(--textColor);
     text-align: center;
     box-shadow:  0px -5px 10px var(--boxshadow);
     position: relative;
@@ -454,3 +464,12 @@ FOOTER GRID
     transition: all 0.5s ease;
 }
 
+.bun{
+    transition: all 0.3s ease;
+}
+
+.bun:hover{
+    cursor: pointer;
+    -webkit-transform: scale(1.02);
+    transition: all 0.3s ease;
+}

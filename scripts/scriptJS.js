@@ -335,18 +335,6 @@ darkMode.addEventListener('click', () =>
   }
 })
 
-const buttonCards = document.querySelector('.buttonCards')
-buttonCards.addEventListener('click', () => 
-{
-  const assetDisplay = document.querySelector('.assetDisplay')
-  assetDisplay.style.display = "block"
-
-  const boutonAsset = document.querySelector('.boutonAsset')
-boutonAsset.addEventListener('click', () => 
-{
-  assetDisplay.style.display = "none"
-})
-})
 
 // OVERLAY RULES
 
@@ -358,8 +346,25 @@ buttonRules.addEventListener('click', () =>
   rulesDisplay.style.display = 'block'
 })
 
-const quitButton = document.querySelector('.quitButton')
+const quitButton = document.querySelectorAll('.quitButton')
 quitButton.addEventListener('click', () => 
 {
   rulesDisplay.style.display = 'none'
+})
+
+// OVERLAY CARDS
+
+const buttonCards = document.querySelector('.buttonCards')
+console.log(buttonCards);
+
+buttonCards.addEventListener('click', () => 
+{
+  const overlayCards = document.querySelector('.overlayCards')
+  overlayCards.style.display = "block"
+
+  const boutonAsset = document.querySelector('.quitButton')
+boutonAsset.addEventListener('click', () => 
+{
+  overlayCards.style.display = "none"
+})
 })

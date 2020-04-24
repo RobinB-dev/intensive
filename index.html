@@ -13,11 +13,11 @@
 
     <!-- OVERLAY NAME -->
 
-    <div class="overlayName">
+    <!-- <div class="overlayName">
         <span class="pseudo">Quel est votre pseudo ?</span>
         <input type="text" class="pseudoInput" placeholder="Quel est votre pseudo ?" required minlength="3" maxlength="12">
         <div class="confirmButton"><span class="confirm">Confirmer</span></div>
-    </div>
+    </div> -->
 
     <!-- OVERLAY RULES -->
 
@@ -40,7 +40,7 @@
         <br>
         <h2>Types de cartes</h2>
         <div class="rules1">
-            <span>Vos adversaires et vous pouvez attaquer grâce à de malheureux événements comme le manque cruel d'idée avant la fin d'un projet. Vous allez devoir trouver la carte qui contre ce problème et qui va vous remettre en course. </span>
+            <span>Vos adversaires et vous pouvez attaquer grâce à de malheureux événements comme le manque cruel d'idées avant la fin d'un projet. Vous allez devoir trouver la carte qui contre ce problème et qui va vous remettre en course. </span>
         </div>
         <br>
         <h2>Les bottes</h2>
@@ -50,73 +50,15 @@
         <br>
         <h2>Bonne chance Designers, que l'inspiration vous protège !</h2>
         <div class="quitButton"><span class="confirm">Quitter</span></div>
-
     </div>
     
     <!-- OVERLAY DISPLAY  -->
 
-    <div class="overlayCards">
-        <div class="subContainer">
-            <h1>Differentes cartes</h1>
-            <div class="cardContainer">
-                <img src="./images/cards/card_client.svg" alt="">
-            </div>
-            <div class="cardContainer">
-                <img src="./images/cards/card_clueless.svg" alt="">
-            </div>
-            <div class="cardContainer">
-                <img src="./images/cards/card_insominia.svg" alt="">
-            </div>
-            <div class="cardContainer">
-                <img src="./images/cards/card_photoshop.svg" alt="">
-            </div>
-            <div class="cardContainer">
-                <img src="./images/cards/card_medical_leave.svg" alt="">
-            </div>
-            <span class="arrow">▼</span>
-            <span class="arrow">▼</span>
-            <span class="arrow">▼</span>
-            <span class="arrow">▼</span>
-            <span class="arrow">▼</span>
-            <div class="cardContainer">
-                <img src="./images/cards/card_meeting.svg" alt="">
-            </div>
-            <div class="cardContainer">
-                <img src="./images/cards/card_pinterest.svg" alt="">
-            </div>
-            <div class="cardContainer">
-                <img src="./images/cards/card_coffee.svg" alt="">
-            </div>
-            <div class="cardContainer">
-                <img src="./images/cards/card_restart.svg" alt="">
-            </div>
-            <div class="cardContainer">
-                <img src="./images/cards/card_healing.svg" alt="">
-            </div>
-            <span class="arrow largeArrow">▼</span>
-            <span class="arrow">▼</span>
-            <span class="arrow">▼</span>
-            <span class="arrow">▼</span>
-            <div class="cardContainer colab">
-                <img src="./images/cards/card_colaborator.svg" alt="">
-            </div>
-            <div class="cardContainer">
-                <img src="./images/cards/card_sleeping_pill.svg" alt="">
-            </div>
-            <div class="cardContainer">
-                <img src="./images/cards/card_computer_science.svg" alt="">
-            </div>
-            <div class="cardContainer">
-                <img src="./images/cards/card_iron_constitution.svg" alt="">
-            </div>
-        </div>
-        <div class="quitButtonCards quitButton"><span class="confirm">Quitter</span>
-        </div>
+    <div class="assetDisplay" style="display:none;">
+        <img src="./images/logoHetic.svg" alt="">
+        <div class="confirmButton boutonAsset"><span class="confirm">J'ai compris !</span></div>
 
-        </div>
-
-    <!-- ASSET DISPLAY  -->
-
+    </div>
 
     <!-- GRID GAME CONTAINER-->
 
@@ -264,7 +206,7 @@
             <div class="boxShadow">
                 <div class="slot1 profil">
                     <div class="overlay">375</div>
-                    <h2 class="name_player"></h2>
+                    <h2 class="name_player">Robin</h2>
                     <img class="avatar user" src="./images/icons/iconUser.svg" alt="">
                 </div>
                 <div class="slot2 speed">
@@ -324,6 +266,6 @@
     <audio class="audioGame" src="./music/Muffled_Tines.mp3" loop>
     </audio>
     <script src="./scripts/scriptTable.js"></script>
-    <script src="./scripts/scriptJS.js"></script>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>

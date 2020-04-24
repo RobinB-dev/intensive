@@ -87,16 +87,19 @@ body{
 .confirmButton, .quitButton{
     display: flex;
     justify-content: center;
-    justify-self: center;
-    align-self: center;
     width: 150px;
     height: 40px;
+    line-height: 40px;
+    margin-bottom: 10px;
     margin-top: 20px;
     background: var(--bluePastel);
     border-radius: 20px;
     box-shadow:  15px 15px 50px var(--boxshadow), 
     -15px -15px 50px var(--boxshadow);
     cursor: pointer;
+    color: var(--blue);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .confirmButton:hover, .quitButton:hover{
@@ -109,7 +112,6 @@ body{
     width: 960px;
     height: 700px;
     position: absolute;
-    color: var(--blue);
     background: var(--white);
     z-index: 11;
     padding: 20px;
@@ -160,9 +162,6 @@ body{
 .overlayCards{
     display: flex;
     text-align: center;
-    flex-direction: column;
-    justify-self: center;
-    align-items: center;
     width: 960px;
     position: absolute;
     color: var(--blue);
@@ -179,6 +178,8 @@ body{
 
 .subContainer{
     display: grid;
+    margin-left: auto;
+    margin-right: auto;
     grid-template-columns: repeat(5, 1fr);
     width: 500px;
 

@@ -146,7 +146,7 @@ function moveCardFunc()
       memDistance = memDistance + parseInt(distanceCard)
       const win = document.querySelector('.myDistanceY')
       win.textContent = memDistance
-      if (memDistance >= 100 && memWin == 0)
+      if (memDistance >= 1000 && memWin == 0)
       {
         overlayWin.style.display = 'block'
         memWin = 1

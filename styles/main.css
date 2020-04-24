@@ -106,7 +106,6 @@ body{
 }
 
 .confirmButton, .quitButton{
-.confirmButton{
     display: flex;
     align-items: center;
     justify-content: center;

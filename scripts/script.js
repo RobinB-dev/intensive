@@ -9,8 +9,7 @@ const overlay = document.querySelector('.overlayName')
 
 confirmButton.addEventListener('click', () =>
 {
-   console.log(pseudoInput.value)
-   playerName.textContent = `${pseudoInput.value} (you)`
+  playerName.textContent = `${pseudoInput.value} (you)`
 
    // The player can't confirm if he doesn't enter a value
 
@@ -22,13 +21,13 @@ confirmButton.addEventListener('click', () =>
 
 // Table with 106 cards, attribut : nick, id, type
 
-
+// the function allows you to shuffle the cards
 function shuffle(a)
 {
   for (let i = a.length - 1; i > 0; i--)
   {
-      const j = Math.floor(Math.random() * (i + 1));
-      [a[i], a[j]] = [a[j], a[i]];
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
   }
   return a;
 }
@@ -39,10 +38,11 @@ deck = shuffle(deck)
 let card = document.querySelector('.card')
 let hand = []
 
-
+// the function listen the click on the deck
 const clickDeck = document.querySelector('.pickCard')
-clickDeck.addEventListener('click',(event) => {
-takeCard()
+clickDeck.addEventListener('click',(event) => 
+{
+  takeCard()
 })
 
 //card slot (positions)
@@ -53,6 +53,7 @@ let card4 = 0
 let card5 = 0
 let card6 = 0
 
+// this function insert cards in the hand from the deck
 function takeCard()
 {
   const card = deck.pop()
@@ -67,11 +68,9 @@ function takeCard()
   // if it's true the card goes in the hand
   if (card1 == 0)
   {
-    console.log(card1);
     hand.splice(0, 1, card);
     document.querySelector('.card1').src = image
     card1 = 1
-    console.log(card1);
   }
   else if (card2 == 0)
   {
@@ -107,30 +106,39 @@ function takeCard()
 
 
 let clean = ''
+let placeType = ''
 
+// listen click on a card in your hand
 const moveCard = document.querySelectorAll('.myCards')
 for (card of moveCard)
 {
   card.addEventListener('click', moveCardFunc)
 }
-let placeType = ''
+
+
 function moveCardFunc()
 {
   let getIndex = this.classList[1].substr(4)
-
   const nick = hand.map(hand => `${hand.nick}`)
   const type = hand.map(hand => `${hand.type}`)
   const distance = hand.map(hand => `${hand.distance}`)
   const moveSRC = [`./images/cards/${nick[parseInt(getIndex-1)]}.svg`]
 
+  // get the class name of the element in the window that you click on
   window.onclick = function(e)
   {
     const newPlace = e.srcElement.className;
+    // get the class name of the element on the slot that you click on
     const lastFour = '.' + newPlace.substr(newPlace.length - 4);
-    let lastFive = '.' + newPlace.substr(newPlace.length - 5);
+    // get the class name of the card that that we select 
+    const lastFive = '.' + newPlace.substr(newPlace.length - 5);
+    // fisrtFour check if newPlace starts with card
     const firstFour = newPlace.substring(0, 4);
+    // get the type of the card that that we select 
     const typeCard = type[parseInt(newPlace.substr(newPlace.length - 1)) - 1];
+    // get the distance value of the card that that we select (not working yet)
     const distanceCard = distance[parseInt(newPlace.substr(newPlace.length - 1)) - 1];
+    // frees the space of the card that has been selected by assigning it the value 0
     if (lastFive == '.card1')
     {
       card1 = 0
@@ -157,40 +165,43 @@ function moveCardFunc()
       clean = '.card6'
     }
 
+    // that highlight the areas where you can place the map according to its type
     if (typeCard == 'attack' || typeCard == 'defense')
     {
-      document.querySelectorAll('.attack').forEach(function(e) {e.style.backgroundColor='#79b8ff18'});
-      document.querySelectorAll('.speed').forEach(function(e) {e.style.backgroundColor=''});
-      document.querySelectorAll('.asset').forEach(function(e) {e.style.backgroundColor=''});
-      document.querySelectorAll('.limite').forEach(function(e) {e.style.backgroundColor=''});
+      document.querySelectorAll('.attack').forEach(function(e) {e.style.backgroundColor = '#79b8ff18'});
+      document.querySelectorAll('.speed').forEach(function(e) {e.style.backgroundColor = ''});
+      document.querySelectorAll('.asset').forEach(function(e) {e.style.backgroundColor = ''});
+      document.querySelectorAll('.limite').forEach(function(e) {e.style.backgroundColor = ''});
     }
     else if (typeCard == 'speed')
     {
-      document.querySelectorAll('.speed').forEach(function(e) {e.style.backgroundColor='#79b8ff18'});
-      document.querySelectorAll('.attack').forEach(function(e) {e.style.backgroundColor=''});
-      document.querySelectorAll('.asset').forEach(function(e) {e.style.backgroundColor=''});
-      document.querySelectorAll('.limite').forEach(function(e) {e.style.backgroundColor=''});
+      document.querySelectorAll('.speed').forEach(function(e) {e.style.backgroundColor = '#79b8ff18'});
+      document.querySelectorAll('.attack').forEach(function(e) {e.style.backgroundColor = ''});
+      document.querySelectorAll('.asset').forEach(function(e) {e.style.backgroundColor = ''});
+      document.querySelectorAll('.limite').forEach(function(e) {e.style.backgroundColor = ''});
     }
     else if (typeCard == 'asset')
     {
-      document.querySelectorAll('.asset').forEach(function(e) {e.style.backgroundColor='#79b8ff18'});
-      document.querySelectorAll('.attack').forEach(function(e) {e.style.backgroundColor=''});
-      document.querySelectorAll('.speed').forEach(function(e) {e.style.backgroundColor=''});
-      document.querySelectorAll('.limite').forEach(function(e) {e.style.backgroundColor=''});
+      document.querySelectorAll('.asset').forEach(function(e) {e.style.backgroundColor = '#79b8ff18'});
+      document.querySelectorAll('.attack').forEach(function(e) {e.style.backgroundColor = ''});
+      document.querySelectorAll('.speed').forEach(function(e) {e.style.backgroundColor = ''});
+      document.querySelectorAll('.limite').forEach(function(e) {e.style.backgroundColor = ''});
     }
     else if (typeCard == 'limite' || typeCard == 'limite_def')
     {
-      document.querySelectorAll('.limite').forEach(function(e) {e.style.backgroundColor='#79b8ff18'});
-      document.querySelectorAll('.attack').forEach(function(e) {e.style.backgroundColor=''});
-      document.querySelectorAll('.speed').forEach(function(e) {e.style.backgroundColor=''});
-      document.querySelectorAll('.asset').forEach(function(e) {e.style.backgroundColor=''});
+      document.querySelectorAll('.limite').forEach(function(e) {e.style.backgroundColor = '#79b8ff18'});
+      document.querySelectorAll('.attack').forEach(function(e) {e.style.backgroundColor = ''});
+      document.querySelectorAll('.speed').forEach(function(e) {e.style.backgroundColor = ''});
+      document.querySelectorAll('.asset').forEach(function(e) {e.style.backgroundColor = ''});
     }
 
+    // injects the src of the selected card into the chosen location and delete the src of the card in your hand
     if (firstFour == 'card')
     {
       document.querySelector(lastFour).src = moveSRC
       document.querySelector(clean).src = ''
     }
+    // if we click on the bin 
     else if (firstFour == 'trsh'){
       document.querySelector(clean).src = ''
     }
@@ -199,11 +210,6 @@ function moveCardFunc()
 
 
 
-
-const  player1Attack = document.querySelector('.player1Attack')
-const  player3Attack = document.querySelector('.player3Attack')
-const  player4Attack = document.querySelector('.player4Attack')
-// console.log(player3Attack)
 
 
 
@@ -295,19 +301,19 @@ playAudio.addEventListener('click', () =>
 playAudio.addEventListener('click', () =>
 {
   // Different conditions to put the image in the right place depending of the dark mode and if audio is played or not.
-  if (audioCount%2 != 0 && count%2!=0)
+  if (audioCount%2 != 0 && count%2!= 0)
   {
     document.querySelector('.iconMute').src = iconVolume + dark + chem2
   }
-  else if(audioCount%2 !=0 && count%2==0)
+  else if(audioCount%2 != 0 && count%2 == 0)
   {
     document.querySelector('.iconMute').src = iconVolume + chem2
   }
-  else if(audioCount%2 ==0 && count%2!=0)
+  else if(audioCount%2 == 0 && count%2!= 0)
   {
     document.querySelector('.iconMute').src = iconMute + dark + chem2
   }
-  else if(audioCount%2 ==0 && count%2==0)
+  else if(audioCount%2 == 0 && count%2 == 0)
   {
     document.querySelector('.iconMute').src = iconMute + chem2
   }
@@ -317,19 +323,19 @@ playAudio.addEventListener('click', () =>
 darkMode.addEventListener('click', () =>
 {
   // Different conditions to put the image in the right place depending of the dark mode and if audio is played or not.
-  if (audioCount%2 != 0 && count%2!=0)
+  if (audioCount%2 != 0 && count%2!= 0)
   {
     document.querySelector('.iconMute').src = iconVolume + dark + chem2
   }
-  else if(audioCount%2 !=0 && count%2==0)
+  else if(audioCount%2 != 0 && count%2== 0)
   {
     document.querySelector('.iconMute').src = iconVolume + chem2
   }
-  else if(audioCount%2 ==0 && count%2!=0)
+  else if(audioCount%2 == 0 && count%2!== 0)
   {
     document.querySelector('.iconMute').src = iconMute + dark + chem2
   }
-  else if(audioCount%2 ==0 && count%2==0)
+  else if(audioCount%2 == 0 && count%2== 0)
   {
     document.querySelector('.iconMute').src = iconMute + chem2
   }
@@ -347,26 +353,23 @@ buttonRules.addEventListener('click', () =>
 })
 // Taking the quit button to make the rules disapear
 const quitButton = document.querySelector('.quitButton')
-console.log(quitButton)
 quitButton.addEventListener('click', () => 
 {
-  console.log(quitButton)
   rulesDisplay.style.display = 'none'
 })
 
 // OVERLAY CARDS
 
 const buttonCards = document.querySelector('.buttonCards')
-console.log(buttonCards);
 
 buttonCards.addEventListener('click', () => 
 {
   const overlayCards = document.querySelector('.overlayCards')
-  overlayCards.style.display = "block"
+  overlayCards.style.display = 'block'
 
   const boutonAsset = document.querySelector('.quitButtonCards')
   boutonAsset.addEventListener('click', () => 
 {
-  overlayCards.style.display = "none"
+  overlayCards.style.display = 'none'
 })
 })
